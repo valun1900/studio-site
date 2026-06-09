@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T5TMH2RP');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Страница не найдена — AlehKireyeuStudio</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F8F5EF;--bg2:#FFFFFF;--surface:#F2EDE4;--border:#E4DCCF;--text:#1A1714;--text2:#6B6057;--accent:#8B6F47;--accent-light:#EDE5D8;--radius:4px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:24px;text-align:center;}
+.num{font-family:'Cormorant Garamond',serif;font-size:clamp(96px,20vw,180px);font-weight:300;color:var(--accent-light);line-height:1;margin-bottom:8px;letter-spacing:-4px;}
+.tag{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,6vw,36px);font-weight:500;margin-bottom:12px;line-height:1.2;}
+.sub{font-size:15px;color:var(--text2);line-height:1.65;margin-bottom:36px;font-weight:300;max-width:380px;}
+.actions{display:flex;flex-direction:column;gap:10px;width:100%;max-width:320px;}
+.btn-primary{background:var(--text);color:var(--bg);border:none;padding:15px 24px;font-size:14px;cursor:pointer;border-radius:var(--radius);font-family:inherit;text-decoration:none;font-weight:500;display:block;text-align:center;transition:opacity 0.2s;}
+.btn-primary:hover{opacity:0.85;}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--border);padding:14px 24px;font-size:14px;cursor:pointer;border-radius:var(--radius);font-family:inherit;text-decoration:none;display:block;text-align:center;transition:border-color 0.2s;}
+.btn-outline:hover{border-color:var(--accent);background:var(--accent-light);}
+.lang-bar{position:fixed;top:16px;right:16px;display:flex;gap:4px;}
+.lang-btn{background:none;border:1px solid var(--border);cursor:pointer;font-size:12px;letter-spacing:0.06em;color:var(--text2);padding:4px 8px;font-family:inherit;border-radius:2px;}
+.lang-btn.active{background:var(--accent-light);border-color:var(--accent);color:var(--text);font-weight:500;}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5TMH2RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="btn-ru" onclick="setLang('ru')">RU</button>
+  <button class="lang-btn" id="btn-pl" onclick="setLang('pl')">PL</button>
+</div>
+
+<div class="num">404</div>
+<p class="tag" data-i18n="tag">AlehKireyeuStudio · Wrocław</p>
+<h1 data-i18n="title">Страница не найдена</h1>
+<p class="sub" data-i18n="sub">Возможно, ссылка устарела или страница была перемещена. Вернитесь на главную — там есть всё что нужно.</p>
+
+<div class="actions">
+  <a href="index.html" class="btn-primary" data-i18n="btn_home">На главную</a>
+  <a href="index.html#courses" class="btn-outline" data-i18n="btn_courses">Смотреть курсы</a>
+</div>
+
+<script>
+const T = {
+  ru: {
+    tag: 'AlehKireyeuStudio · Wrocław',
+    title: 'Страница не найдена',
+    sub: 'Возможно, ссылка устарела или страница была перемещена. Вернитесь на главную — там есть всё что нужно.',
+    btn_home: 'На главную',
+    btn_courses: 'Смотреть курсы'
+  },
+  pl: {
+    tag: 'AlehKireyeuStudio · Wrocław',
+    title: 'Strona nie znaleziona',
+    sub: 'Możliwe, że link jest nieaktualny lub strona została przeniesiona. Wróć na stronę główną — tam znajdziesz wszystko.',
+    btn_home: 'Strona główna',
+    btn_courses: 'Zobacz kursy'
+  }
+};
+
+let lang = localStorage.getItem('lang') || 'ru';
+function setLang(l) {
+  lang = l; localStorage.setItem('lang', l);
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    if (T[l][el.dataset.i18n]) el.innerHTML = T[l][el.dataset.i18n];
+  });
+  ['ru','pl'].forEach(x => {
+    const b = document.getElementById('btn-'+x);
+    if (b) b.classList.toggle('active', x === l);
+  });
+}
+setLang(lang);
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Netlify configuration for AlehKireyeuStudio
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

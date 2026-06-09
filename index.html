@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T5TMH2RP');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlehKireyeuStudio — Студия актёрского мастерства во Вроцлаве</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F8F5EF; --bg2: #FFFFFF; --surface: #F2EDE4;
+    --border: #E4DCCF; --text: #1A1714; --text2: #6B6057;
+    --accent: #8B6F47; --accent-light: #EDE5D8; --radius: 4px; --max: 1160px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(248,245,239,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+  nav.scrolled { border-color: var(--border); }
+  .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 32px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .nav-logo img { height: 32px; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text2); font-size: 14px; letter-spacing: 0.02em; transition: color 0.2s; white-space: nowrap; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .lang-switch { display: flex; align-items: center; gap: 2px; }
+  .lang-btn { background: none; border: none; cursor: pointer; font-size: 12px; letter-spacing: 0.08em; color: var(--text2); padding: 4px 7px; font-family: inherit; transition: color 0.2s; border-radius: 2px; }
+  .lang-btn.active { color: var(--text); font-weight: 500; background: var(--accent-light); }
+  .lang-sep { color: var(--border); font-size: 11px; }
+  .nav-cta { background: var(--text); color: var(--bg); border: none; padding: 10px 22px; font-size: 13px; letter-spacing: 0.04em; cursor: pointer; border-radius: var(--radius); font-family: inherit; transition: opacity 0.2s; white-space: nowrap; }
+  .nav-cta:hover { opacity: 0.8; }
+  .nav-mobile-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--text); }
+
+  section { padding: 96px 32px; }
+  .container { max-width: var(--max); margin: 0 auto; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* HERO */
+  #hero { padding-top: 140px; padding-bottom: 80px; background: var(--bg); }
+  .hero-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .hero-tag { display: inline-block; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5vw, 68px); font-weight: 500; line-height: 1.35; letter-spacing: -0.01em; color: var(--text); margin-bottom: 24px; padding-bottom: 20px; }
+  .hero-title em { font-style: italic; color: var(--accent); }
+  .hero-sub { font-size: 16px; color: var(--text2); line-height: 1.65; margin-bottom: 32px; max-width: 440px; font-weight: 300; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .btn-primary { background: var(--text); color: var(--bg); border: none; padding: 14px 28px; font-size: 14px; letter-spacing: 0.04em; cursor: pointer; border-radius: var(--radius); font-family: inherit; transition: opacity 0.2s; text-decoration: none; display: inline-block; }
+  .btn-primary:hover { opacity: 0.8; }
+  .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); padding: 13px 24px; font-size: 14px; cursor: pointer; border-radius: var(--radius); font-family: inherit; transition: border-color 0.2s, background 0.2s; text-decoration: none; display: inline-block; }
+  .btn-outline:hover { border-color: var(--accent); background: var(--accent-light); }
+  .hero-rating { margin-top: 40px; display: flex; align-items: center; gap: 10px; }
+  .hero-stars { color: var(--accent); font-size: 16px; letter-spacing: 2px; }
+  .hero-rating-text { font-size: 13px; color: var(--text2); }
+  .hero-rating-text a { color: var(--text2); text-decoration: underline; text-underline-offset: 3px; }
+  .hero-img { position: relative; }
+  .hero-img img { width: 100%; height: 520px; object-fit: cover; border-radius: 8px; display: block; }
+  .hero-badge { position: absolute; bottom: -20px; left: -20px; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; font-size: 13px; color: var(--text2); box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+  .hero-badge strong { display: block; font-size: 22px; color: var(--text); font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+
+  #stats { padding: 56px 32px; background: var(--bg); }
+  .stats-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .stat { background: var(--bg2); padding: 32px 28px; text-align: center; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 500; color: var(--text); line-height: 1; margin-bottom: 8px; }
+  .stat-label { font-size: 13px; color: var(--text2); line-height: 1.4; }
+
+  #why { background: var(--bg); }
+  .section-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 500; line-height: 1.15; letter-spacing: -0.01em; max-width: 600px; margin-bottom: 64px; }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .why-card { background: var(--bg2); padding: 36px 32px; }
+  .why-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: var(--accent-light); font-weight: 500; line-height: 1; margin-bottom: 20px; }
+  .why-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; margin-bottom: 10px; }
+  .why-card p { font-size: 14px; color: var(--text2); line-height: 1.65; }
+
+  #courses { background: var(--surface); }
+  .courses-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .course-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: box-shadow 0.3s; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+  .course-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+  .course-img { height: 240px; overflow: hidden; }
+  .course-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+  .course-card:hover .course-img img { transform: scale(1.03); }
+  .course-body { padding: 28px; }
+  .course-tag { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .course-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; margin-bottom: 10px; }
+  .course-body p { font-size: 14px; color: var(--text2); line-height: 1.6; margin-bottom: 16px; }
+  .course-link { font-size: 13px; color: var(--accent); letter-spacing: 0.03em; display: flex; align-items: center; gap: 6px; }
+  .course-link::after { content: '→'; }
+
+  #schedule { background: var(--bg2); }
+  .schedule-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .schedule-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+  .schedule-table th { text-align: left; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text2); font-weight: 400; }
+  .schedule-table td { padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 14px; vertical-align: top; }
+  .schedule-table td:first-child { color: var(--text2); width: 130px; }
+  .schedule-table td:last-child { font-weight: 500; }
+  .group-tag { display: inline-block; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); background: var(--accent-light); border-radius: 2px; padding: 2px 6px; }
+  .price-block { margin-top: 40px; padding: 28px; background: var(--surface); border-radius: 8px; border: 1px solid var(--border); }
+  .price-block h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; margin-bottom: 12px; font-weight: 600; }
+  .price-main { display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px; }
+  .price-new { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 500; color: var(--text); line-height: 1; }
+  .price-currency { font-size: 18px; color: var(--text2); }
+  .price-old { font-size: 18px; color: var(--text2); text-decoration: line-through; }
+  .price-note { font-size: 13px; color: var(--text2); line-height: 1.5; }
+  .price-single { margin-top: 12px; font-size: 14px; color: var(--text2); }
+  .price-single strong { color: var(--text); }
+
+  #about { background: var(--bg); }
+  .about-grid { display: grid; grid-template-columns: 400px 1fr; gap: 80px; align-items: start; }
+  .about-img img { width: 100%; border-radius: 8px; display: block; }
+  .about-name { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 500; line-height: 1.1; margin-bottom: 6px; }
+  .about-role { font-size: 14px; color: var(--accent); margin-bottom: 28px; }
+  .about-text { font-size: 16px; color: var(--text2); line-height: 1.75; font-weight: 300; margin-bottom: 28px; }
+  .about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .about-fact { padding: 16px; background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); }
+  .about-fact-num { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; color: var(--text); line-height: 1; margin-bottom: 4px; }
+  .about-fact-label { font-size: 12px; color: var(--text2); }
+
+  #reviews { background: var(--surface); }
+  .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+  .review-card { background: var(--bg2); padding: 28px; border-radius: 8px; border: 1px solid var(--border); }
+  .review-stars { color: var(--accent); font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
+  .review-text { font-size: 14px; color: var(--text2); line-height: 1.7; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+  .review-author { display: flex; align-items: center; gap: 10px; }
+  .review-avatar { width: 36px; height: 36px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+  .review-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .review-name { font-size: 13px; font-weight: 500; }
+  .review-date { font-size: 11px; color: var(--text2); }
+  .reviews-more { margin-top: 36px; text-align: center; }
+  .reviews-more a { font-size: 14px; color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+  .reviews-more a::after { content: '→'; }
+
+  #cta { background: var(--text); color: var(--bg); text-align: center; padding: 96px 32px; }
+  .cta-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(248,245,239,0.5); margin-bottom: 16px; }
+  .cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 400; line-height: 1.15; max-width: 700px; margin: 0 auto 16px; color: var(--bg); }
+  .cta-sub { font-size: 16px; color: rgba(248,245,239,0.6); margin-bottom: 40px; font-weight: 300; }
+  .cta-form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; max-width: 480px; margin: 0 auto; }
+  .cta-input { flex: 1; min-width: 200px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: var(--bg); padding: 14px 18px; font-family: inherit; font-size: 15px; border-radius: var(--radius); outline: none; transition: border-color 0.2s; }
+  .cta-input::placeholder { color: rgba(248,245,239,0.4); }
+  .cta-input:focus { border-color: rgba(255,255,255,0.4); }
+  .cta-btn { background: var(--bg); color: var(--text); border: none; padding: 14px 28px; font-size: 14px; letter-spacing: 0.04em; cursor: pointer; border-radius: var(--radius); font-family: inherit; font-weight: 500; transition: opacity 0.2s; white-space: nowrap; }
+  .cta-btn:hover { opacity: 0.85; }
+  .cta-privacy { margin-top: 16px; font-size: 12px; color: rgba(248,245,239,0.4); }
+  .cta-phone { margin-top: 32px; font-size: 14px; color: rgba(248,245,239,0.5); }
+  .cta-phone a { color: rgba(248,245,239,0.8); text-decoration: none; }
+
+  .modal-overlay { position: fixed; inset: 0; z-index: 999; background: rgba(26,23,20,0.6); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal { background: var(--bg2); border-radius: 12px; padding: 48px; max-width: 480px; width: 100%; transform: translateY(20px); transition: transform 0.3s; position: relative; }
+  .modal-overlay.open .modal { transform: none; }
+  .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; cursor: pointer; font-size: 20px; color: var(--text2); padding: 8px; }
+  .modal-tag { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .modal h2 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; margin-bottom: 8px; }
+  .modal-sub { font-size: 14px; color: var(--text2); margin-bottom: 28px; line-height: 1.5; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text2); margin-bottom: 6px; }
+  .form-group input, .form-group select { width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius); font-family: inherit; font-size: 15px; color: var(--text); background: var(--bg); outline: none; transition: border-color 0.2s; -webkit-appearance: none; appearance: none; }
+  .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6057' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  .form-group input:focus, .form-group select:focus { border-color: var(--accent); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .form-submit { width: 100%; background: var(--text); color: var(--bg); border: none; padding: 15px; font-size: 14px; letter-spacing: 0.06em; cursor: pointer; border-radius: var(--radius); font-family: inherit; margin-top: 8px; font-weight: 500; transition: opacity 0.2s; }
+  .form-submit:hover { opacity: 0.8; }
+  .form-privacy { font-size: 12px; color: var(--text2); text-align: center; margin-top: 12px; }
+  .form-success { text-align: center; padding: 20px 0; }
+  .form-success-icon { font-size: 48px; margin-bottom: 16px; color: var(--accent); }
+  .form-success h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 8px; }
+  .form-success p { font-size: 14px; color: var(--text2); line-height: 1.6; }
+
+  footer { background: var(--text); color: rgba(248,245,239,0.5); padding: 56px 32px 32px; }
+  .footer-inner { max-width: var(--max); margin: 0 auto; }
+  .footer-top { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(248,245,239,0.1); }
+  .footer-logo img { height: 28px; opacity: 0.8; margin-bottom: 12px; filter: invert(1); }
+  .footer-desc { font-size: 13px; line-height: 1.6; max-width: 240px; }
+  .footer-col h5 { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(248,245,239,0.3); margin-bottom: 16px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col a { font-size: 14px; color: rgba(248,245,239,0.6); text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--bg); }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 12px; flex-wrap: wrap; gap: 8px; }
+  .footer-phone a { color: rgba(248,245,239,0.8); text-decoration: none; font-size: 14px; }
+
+  .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--text); color: var(--bg); padding: 14px 24px; border-radius: 8px; font-size: 14px; box-shadow: 0 8px 32px rgba(0,0,0,0.2); transition: transform 0.4s; z-index: 9999; pointer-events: none; white-space: nowrap; }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  #tweaks-panel { position: fixed; bottom: 24px; right: 24px; z-index: 500; background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; width: 260px; box-shadow: 0 12px 48px rgba(0,0,0,0.12); display: none; font-size: 13px; }
+  #tweaks-panel.active { display: block; }
+  #tweaks-panel h4 { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; color: var(--text2); }
+  .tweak-row { margin-bottom: 14px; }
+  .tweak-row label { display: block; font-size: 12px; color: var(--text2); margin-bottom: 5px; }
+  .tweak-row select { width: 100%; padding: 7px 28px 7px 10px; border: 1px solid var(--border); border-radius: var(--radius); font-family: inherit; font-size: 13px; background: var(--bg); color: var(--text); cursor: pointer; -webkit-appearance: none; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6057' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+
+  .mobile-menu { display: none; position: fixed; inset: 0; z-index: 98; background: var(--bg); flex-direction: column; padding: 80px 32px 48px; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 400; color: var(--text); text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .mobile-menu a:last-child { border: none; margin-top: 24px; color: var(--accent); }
+  .mobile-lang { display: flex; gap: 12px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+  .mobile-lang button { background: none; border: 1px solid var(--border); padding: 8px 16px; font-family: inherit; font-size: 14px; cursor: pointer; border-radius: var(--radius); color: var(--text2); }
+  .mobile-lang button.active { background: var(--accent-light); border-color: var(--accent); color: var(--text); font-weight: 500; }
+
+  @media (max-width: 900px) {
+    /* NAV */
+    .nav-links { display: none; }
+    .nav-right .nav-cta { display: none; }
+    .nav-right a[href^="https://wa"], .nav-right a[href^="https://t.me"] { display: none; }
+    .nav-mobile-btn { display: block; }
+    .nav-inner { padding: 0 16px; }
+
+    /* HERO */
+    #hero { padding-top: 96px; padding-bottom: 48px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+    .hero-tag { font-size: 11px; margin-bottom: 12px; }
+    .hero-title { font-size: clamp(36px, 9vw, 48px); margin-bottom: 16px; line-height: 1.2; }
+    .hero-sub { font-size: 15px; margin-bottom: 24px; max-width: 100%; }
+    .hero-actions { flex-direction: column; gap: 10px; }
+    .hero-actions .btn-primary, .hero-actions .btn-outline { width: 100%; text-align: center; padding: 16px; font-size: 15px; }
+    .hero-rating { margin-top: 20px; }
+    .hero-img { display: block; }
+    .hero-img img { height: 260px; border-radius: 8px; }
+    .hero-badge { bottom: -12px; left: -8px; padding: 10px 14px; }
+    .hero-badge strong { font-size: 18px; }
+
+    /* STATS */
+    #stats { padding: 32px 16px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat { padding: 20px 16px; }
+    .stat-num { font-size: 36px; }
+    .stat-label { font-size: 12px; }
+
+    /* SECTIONS */
+    section { padding: 56px 16px; }
+    .section-title { margin-bottom: 32px; font-size: clamp(28px, 7vw, 38px); }
+
+    /* WHY */
+    .why-grid { grid-template-columns: 1fr; }
+    .why-card { padding: 24px 20px; }
+    .why-num { font-size: 36px; margin-bottom: 12px; }
+
+    /* COURSES */
+    .courses-grid { grid-template-columns: 1fr; gap: 16px; }
+    .course-img { height: 200px; }
+    .course-body { padding: 20px; }
+
+    /* SCHEDULE */
+    .schedule-layout { grid-template-columns: 1fr; gap: 32px; }
+
+    /* ABOUT */
+    .about-grid { grid-template-columns: 1fr; gap: 28px; }
+    .about-img { max-width: 100%; }
+    .about-img img { height: 280px; object-fit: cover; }
+    .about-name { font-size: 32px; }
+    .about-text { font-size: 15px; }
+    .about-facts { grid-template-columns: 1fr 1fr; }
+
+    /* REVIEWS */
+    .reviews-grid { grid-template-columns: 1fr; gap: 12px; }
+    .review-card { padding: 20px; }
+
+    /* CTA */
+    #cta { padding: 64px 16px; }
+    .cta-title { font-size: clamp(28px, 8vw, 40px); }
+    .cta-form { flex-direction: column; }
+    .cta-input, .cta-btn { width: 100%; padding: 15px; font-size: 15px; }
+
+    /* MAP */
+    #location .schedule-layout, #location > div > div:last-child { grid-template-columns: 1fr !important; }
+    #location iframe { height: 250px; }
+
+    /* FOOTER */
+    .footer-top { grid-template-columns: 1fr; gap: 28px; }
+    footer { padding-bottom: 80px; }
+
+    /* show call btn on mobile nav */
+    .nav-call-mobile { display: flex !important; }
+    .map-grid { grid-template-columns: 1fr !important; }
+    .modal { padding: 28px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+    #tweaks-panel { width: calc(100vw - 32px); bottom: 80px; right: 16px; }
+  }
+
+  @media (max-width: 480px) {
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .hero-img img { height: 220px; }
+  }
+  /* FLOATING CONTACT BAR */
+  .float-bar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+    background: var(--bg2); border-top: 1px solid var(--border);
+    display: flex; gap: 8px; padding: 10px 16px;
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.08);
+  }
+  .float-btn {
+    flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px;
+    padding: 12px 10px; border-radius: var(--radius);
+    font-family: inherit; font-size: 13px; font-weight: 500;
+    cursor: pointer; border: none; text-decoration: none;
+    transition: opacity 0.2s; white-space: nowrap;
+  }
+  .float-btn:hover { opacity: 0.85; }
+  .float-btn-call { background: var(--text); color: var(--bg); }
+  .float-btn-wa { background: #25D366; color: #fff; }
+  .float-btn-tg { background: #229ED9; color: #fff; }
+  .float-btn svg { width: 17px; height: 17px; flex-shrink: 0; }
+  @media (min-width: 901px) { .float-bar { display: none; } .nav-phone { display: flex !important; } }
+  @media (min-width: 901px) and (max-width: 1100px) { .nav-phone { display: none !important; } }
+  @media (max-width: 900px) { footer { padding-bottom: 80px; } }
+  /* SOCIAL LINKS */
+  .social-links { display: flex; gap: 12px; margin-top: 16px; }
+  .social-link {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(248,245,239,0.08); border: 1px solid rgba(248,245,239,0.12);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(248,245,239,0.6); text-decoration: none; transition: background 0.2s, color 0.2s;
+  }
+  .social-link:hover { background: rgba(248,245,239,0.18); color: var(--bg); }
+  .social-link svg { width: 16px; height: 16px; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5TMH2RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="https://alehkireyeu.art/wp-content/uploads/2025/01/logo.svg" alt="AlehKireyeuStudio">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#why" data-i18n="nav_about">О студии</a></li>
+      <li><a href="#courses" data-i18n="nav_courses">Курсы</a></li>
+      <li><a href="#schedule" data-i18n="nav_schedule">Расписание</a></li>
+      <li><a href="#about" data-i18n="nav_oleg">Об Олеге</a></li>
+      <li><a href="#reviews" data-i18n="nav_reviews">Отзывы</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+48571931404" style="font-size:13px;color:var(--text2);text-decoration:none;letter-spacing:0.02em;display:none;white-space:nowrap;" class="nav-phone">+48 571 931 404</a>
+      <a href="https://wa.me/48571931404" target="_blank" style="color:var(--text2);display:flex;align-items:center;" title="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <a href="https://t.me/alehkireyeustudio" target="_blank" style="color:var(--text2);display:flex;align-items:center;" title="Telegram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" id="btn-ru" onclick="setLang('ru')">RU</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" id="btn-pl" onclick="setLang('pl')">PL</button>
+      </div>
+      <button class="nav-cta" onclick="openModal()" data-i18n="nav_cta">Записаться</button>
+      <button class="nav-mobile-btn" onclick="toggleMenu()" aria-label="Меню">
+        <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><line x1="0" y1="1" x2="22" y2="1" stroke="currentColor" stroke-width="1.5"/><line x1="0" y1="8" x2="22" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="0" y1="15" x2="22" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+      <a href="tel:+48571931404" class="nav-call-mobile" style="display:none;background:var(--text);color:var(--bg);padding:9px 16px;border-radius:var(--radius);font-size:13px;font-weight:500;text-decoration:none;white-space:nowrap;">📞 +48 571 931 404</a>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#why" onclick="toggleMenu()" data-i18n="nav_about">О студии</a>
+  <a href="#courses" onclick="toggleMenu()" data-i18n="nav_courses">Курсы</a>
+  <a href="#schedule" onclick="toggleMenu()" data-i18n="nav_schedule">Расписание</a>
+  <a href="#about" onclick="toggleMenu()" data-i18n="nav_oleg">Об Олеге</a>
+  <a href="#reviews" onclick="toggleMenu()" data-i18n="nav_reviews">Отзывы</a>
+  <a href="#" onclick="toggleMenu(); openModal();" data-i18n="nav_cta">Записаться →</a>
+  <div class="mobile-lang">
+    <button class="active" id="mbtn-ru" onclick="setLang('ru')">RU</button>
+    <button id="mbtn-pl" onclick="setLang('pl')">PL</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid">
+    <div class="reveal">
+      <span class="hero-tag">ВРОЦЛАВ · ШКОЛА АКТЁРСКОГО МАСТЕРСТВА</span>
+      <h1 class="hero-title" data-i18n="hero_title">Актёрские курсы
+во Вроцлаве</h1>
+      <p class="hero-sub" data-i18n="hero_sub">Снимаем зажимы, возвращаем голос и свободу. Практика с первого занятия — в маленьких группах, где виден прогресс каждого.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="openModal()" data-i18n="hero_btn1">Записаться на пробное</button>
+        <a href="#courses" class="btn-outline" data-i18n="hero_btn2">Смотреть курсы</a>
+      </div>
+      <div class="hero-rating">
+        <span class="hero-stars">★★★★★</span>
+        <span class="hero-rating-text" data-i18n="hero_rating">5.0 на <a href="https://www.google.com/maps/place/AlehKireyeuStudio" target="_blank">Google Maps</a> · более 20 отзывов</span>
+      </div>
+    </div>
+    <div class="hero-img reveal" style="transition-delay:0.15s">
+      <img data-c-img="hero_image_index" src="https://alehkireyeu.art/wp-content/uploads/2024/09/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA-%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0-2024-08-14-001657-1024x717.png" alt="Занятия в студии">
+      <div class="hero-badge">
+        <strong>25+</strong>
+        <span data-i18n="hero_badge">для детей, подростков и взрослых</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-grid reveal">
+    <div class="stat"><div class="stat-num">25+</div><div class="stat-label" data-i18n="stat1">лет опыта в театре и педагогике</div></div>
+    <div class="stat"><div class="stat-num">5.0</div><div class="stat-label" data-i18n="stat2">рейтинг на Google</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-label" data-i18n="stat3">формата — детям, подросткам, взрослым и бизнесу</div></div>
+    <div class="stat"><div class="stat-num">100+</div><div class="stat-label" data-i18n="stat4">довольных родителей и учеников</div></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="container">
+    <p class="section-label reveal" data-i18n="why_label">Почему выбирают нас</p>
+    <h2 class="section-title reveal" data-i18n="why_title">Не просто курсы — пространство роста</h2>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-num">01</div><h3 data-i18n="why1_h">Практика с первого занятия</h3><p data-i18n="why1_p">Каждый урок — камера и сцена. Никаких долгих теорий. Вы работаете, получаете обратную связь и видите результат сразу.</p></div>
+      <div class="why-card reveal" style="transition-delay:0.1s"><div class="why-num">02</div><h3 data-i18n="why2_h">Маленькие группы</h3><p data-i18n="why2_p">До 10 человек в группе. Пропустили занятие — приходите в параллельное. Каждого видно, каждый растёт</p></div>
+      <div class="why-card reveal" style="transition-delay:0.2s"><div class="why-num">03</div><h3 data-i18n="why3_h">20 лет опыта</h3><p data-i18n="why3_p">Педагог Белорусской Академии искусств. Режиссёр-постановщик Минского государственного театра. Автор более 20 спектаклей.</p></div>
+      <div class="why-card reveal" style="transition-delay:0.1s"><div class="why-num">04</div><h3 data-i18n="why4_h">Сертификат студии</h3><p data-i18n="why4_p">Фирменный сертификат — приятный итог курса</p></div>
+      <div class="why-card reveal" style="transition-delay:0.2s"><div class="why-num">05</div><h3 data-i18n="why5_h">Развитие без потолка</h3><p data-i18n="why5_p">После базового курса можно перейти на следующий уровень, участвовать в репетициях и постановке спектаклей.</p></div>
+      <div class="why-card reveal" style="transition-delay:0.3s"><div class="why-num">06</div><h3 data-i18n="why6_h">Результат в жизни</h3><p data-i18n="why6_p">Уверенность на публике, лёгкость в общении, импровизация, голос — навыки, которые работают далеко за пределами сцены.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+  <div class="container">
+    <p class="section-label reveal" data-i18n="courses_label">Программы обучения</p>
+    <h2 class="section-title reveal" data-i18n="courses_title">Курс для каждого</h2>
+    <div class="courses-grid">
+      <a href="vzroslaya.html" class="course-card reveal">
+        <div class="course-img"><img src="https://alehkireyeu.art/wp-content/uploads/2024/09/Снимок-экрана-2024-08-14-004823-1024x912.png" alt="Взрослая студия" style="width: 573px; height: 320px; object-fit: cover"></div>
+        <div class="course-body">
+          <p class="course-tag" data-i18n="c1_tag">ОТ 17 ЛЕТ</p>
+          <h3 data-i18n="c1_h">Взрослая студия</h3>
+          <p data-i18n="c1_p">Освободите голос, тело и уверенность — и почувствуйте себя автором своей жизни</p>
+          <span class="course-link" data-i18n="c_link">Подробнее о курсе</span>
+        </div>
+      </a>
+      <a href="detskaya.html" class="course-card reveal" style="transition-delay:0.1s">
+        <div class="course-img"><img src="https://alehkireyeu.art/wp-content/uploads/2024/08/Снимок-экрана-2024-08-05-185106-1024x730.png" alt="Детская студия" style="height: 70px; width: 67px"></div>
+        <div class="course-body">
+          <p class="course-tag" data-i18n="c2_tag">7–11 лет</p>
+          <h3 data-i18n="c2_h">Детская студия</h3>
+          <p data-i18n="c2_p">Игра как способ стать увереннее. Ребёнок раскрывается, находит друзей и учится выражать себя.</p>
+          <span class="course-link" data-i18n="c_link">Подробнее о курсе</span>
+        </div>
+      </a>
+      <a href="podrostok.html" class="course-card reveal" style="transition-delay:0.1s">
+        <div class="course-img"><img src="https://alehkireyeu.art/wp-content/uploads/2024/09/snimok-ekrana-2024-09-13-150355-1024x629.png" alt="Подростковая студия" style="object-fit: cover; width: 573px; height: 40px"></div>
+        <div class="course-body">
+          <p class="course-tag" data-i18n="c3_tag">12–16 ЛЕТ</p>
+          <h3 data-i18n="c3_h">Подростковая студия</h3>
+          <p data-i18n="c3_p">Творческое развитие для будущих лидеров. Уверенность, самовыражение и командная работа.</p>
+          <span class="course-link" data-i18n="c_link">Подробнее о курсе</span>
+        </div>
+      </a>
+      <div class="course-card reveal" style="transition-delay:0.2s; cursor:default;">
+        <div class="course-img" style="background:var(--surface);overflow:hidden;height:240px;position:relative;">
+          <img src="uploads/Woman.png" alt="Бизнес-тренинги" style="width: 100%; height: 100%; object-fit: cover; padding: 20px; background: var(--surface)">
+        </div>
+        <div class="course-body">
+          <p class="course-tag" data-i18n="c4_tag">Корпоративным</p>
+          <h3 data-i18n="c4_h">Бизнес-тренинги</h3>
+          <p data-i18n="c4_p">Прокачиваем публичные выступления, презентации и переговоры. Подходит руководителям, продажникам и командам стартапов.</p>
+          <button class="btn-outline" onclick="openModal()" style="margin-top:4px" data-i18n="c4_btn">Узнать детали</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+  <div class="container">
+    <div class="schedule-layout">
+      <div>
+        <p class="section-label reveal" data-i18n="sch_label">Расписание</p>
+        <h2 class="section-title reveal" style="margin-bottom:0" data-i18n="sch_title">Когда мы занимаемся</h2>
+        <table class="schedule-table reveal">
+          <thead><tr>
+            <th data-i18n="sch_th1">День</th>
+            <th data-i18n="sch_th2">Время</th>
+            <th data-i18n="sch_th3">Группа</th>
+          </tr></thead>
+          <tbody>
+            <tr><td data-i18n="day_wed">Среда</td><td>17:00–19:00</td><td><span class="group-tag" data-i18n="grp_kids">Дети</span></td></tr>
+            <tr><td data-i18n="day_thu">Четверг</td><td>19:00–21:00</td><td><span class="group-tag" data-i18n="grp_adults">Взрослые</span></td></tr>
+            <tr><td data-i18n="day_sat">Суббота</td><td>12:00–14:00</td><td><span class="group-tag" data-i18n="grp_teens">Подростки</span></td></tr>
+            <tr><td data-i18n="day_sat">Суббота</td><td>15:00–17:00</td><td><span class="group-tag" data-i18n="grp_kids">Дети</span></td></tr>
+            <tr><td data-i18n="day_sun">Воскресенье</td><td>14:00–16:00</td><td><span class="group-tag" data-i18n="grp_kids">Дети</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reveal" style="transition-delay:0.2s">
+        <p class="section-label" data-i18n="price_label">Стоимость</p>
+        <h2 class="section-title" style="margin-bottom:0;font-size:32px" data-i18n="price_title">Прозрачные цены</h2>
+        <div class="price-block">
+          <h4 data-i18n="price_h4">💡 Акция — оплатите месяц сразу</h4>
+          <div class="price-main">
+            <span class="price-new" data-c="price_month">400</span>
+            <span class="price-currency">PLN</span>
+            <span class="price-old" data-c="price_old">500 PLN</span>
+          </div>
+          <p class="price-note" data-i18n="price_note">При оплате 4 занятий сразу — экономия 100 zł. Занятия действительны в любой группе.</p>
+          <p class="price-single" data-i18n="price_single">Одно занятие — 125 PLN</p>
+        </div>
+        <p style="font-size:14px;color:var(--text2);margin-top:20px;line-height:1.6" data-i18n="price_sub">Оставьте контакт — поможем выбрать удобное время и запишем на пробное занятие</p>
+        <button class="btn-primary" onclick="openModal()" style="margin-top:20px" data-i18n="hero_btn1">Записаться на пробное</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img reveal">
+        <img src="https://alehkireyeu.art/wp-content/uploads/2024/09/Снимок-экрана-2024-08-14-004823-1024x912.png" alt="Олег Киреев">
+      </div>
+      <div class="reveal" style="transition-delay:0.15s">
+        <p class="section-label" data-i18n="about_label">Основатель студии</p>
+        <h2 class="about-name">Олег Киреев</h2>
+        <p class="about-role" data-i18n="about_role">Режиссёр-постановщик · Педагог · Художественный руководитель</p>
+        <p class="about-text" data-i18n="about_text1">Более 20 лет в профессиональном театре. Режиссёр-постановщик Минского государственного театра, педагог актёрского мастерства в Белорусской Академии искусств. Автор более десятка спектаклей на профессиональных сценах Беларуси.</p>
+        <p class="about-text" data-i18n="about_text2">Соучредитель и художественный руководитель независимого театра «Новый Театр». В 2024 году открыл студию во Вроцлаве — для тех, кто хочет почувствовать себя живым — на сцене и в жизни</p>
+        <div class="about-facts">
+          <div class="about-fact"><div class="about-fact-num">25+</div><div class="about-fact-label" data-i18n="fact1">лет опыта</div></div>
+          <div class="about-fact"><div class="about-fact-num">20+</div><div class="about-fact-label" data-i18n="fact2">постановок спектаклей</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <p class="section-label reveal" data-i18n="rev_label">Отзывы учеников</p>
+    <h2 class="section-title reveal" data-i18n="rev_title">Говорят те, кто занимается</h2>
+    <div class="reviews-grid">
+      <div class="review-card reveal"><div class="review-stars">★★★★★</div><p class="review-text">Одно из лучших моих приключений в этом городе. Ведущий создаёт атмосферу принятия и доверия. Появилось больше расслабленности, уверенности и творчества в жизни.</p><div class="review-author"><div class="review-avatar"><img src="https://alehkireyeu.art/wp-content/uploads/2025/08/chijswajp4ldd0cryl88l6lzcqi_f457e70603783339bcb35b449507842c-2.jpg" alt=""></div><div><div class="review-name">Таня Гращенкова</div><div class="review-date">Март 2025</div></div></div></div>
+      <div class="review-card reveal" style="transition-delay:0.1s"><div class="review-stars">★★★★★</div><p class="review-text">Школа актёрского мастерства превзошла все мои ожидания! Олег — настоящий эксперт, умеет подать материал так, что каждый урок становится увлекательным.</p><div class="review-author"><div class="review-avatar"><img src="https://alehkireyeu.art/wp-content/uploads/2025/08/chijswajp4ldd0cryl88l6lzcqi_7d725a0ac03a1f8b0d50ec9d9cccdf07-2.jpg" alt=""></div><div><div class="review-name">Enegelda Grey</div><div class="review-date">Январь 2025</div></div></div></div>
+      <div class="review-card reveal" style="transition-delay:0.2s"><div class="review-stars">★★★★★</div><p class="review-text">Влюбилась в атмосферу с первого знакомства! Весело, активно и в то же время тактильно, чувственно. Много импровизации и выражения себя.</p><div class="review-author"><div class="review-avatar"><img src="https://alehkireyeu.art/wp-content/uploads/2025/08/chijswajp4ldd0cryl88l6lzcqi_b000eda6c7ead32c83e85a937aba588a-2.jpg" alt=""></div><div><div class="review-name">Olga Kirylenka</div><div class="review-date">Январь 2025</div></div></div></div>
+      <div class="review-card reveal"><div class="review-stars">★★★★★</div><p class="review-text">Доверяю своих детей Олегу Кирееву. Детям нравится заниматься в студии. Они меняются после каждого занятия, начинают фантазировать по-новому.</p><div class="review-author"><div class="review-avatar"><img src="https://alehkireyeu.art/wp-content/uploads/2025/08/chijswajp4ldd0cryl88l6lzcqi_5ec6164a13322a03f3d5b50b55f6776e-2.jpg" alt=""></div><div><div class="review-name">Yuliya Golovach</div><div class="review-date">Август 2025</div></div></div></div>
+      <div class="review-card reveal" style="transition-delay:0.1s"><div class="review-stars">★★★★★</div><p class="review-text">Занимаюсь в студии почти месяц, всем довольна! Учимся работать над собой, выходить из зоны комфорта, работать с голосом и эмоциями.</p><div class="review-author"><div class="review-avatar"><img src="https://lh3.googleusercontent.com/a/ACg8ocKtKzvUwRGbiS5aM9yXe8qsTXQxRN8g38JhaUtIAwzJzamPOQ=s128-c0x00000000-cc-rp-mo" alt=""></div><div><div class="review-name">Yuliya Sakalouskaya</div><div class="review-date">Январь 2025</div></div></div></div>
+      <div class="review-card reveal" style="transition-delay:0.2s"><div class="review-stars">★★★★★</div><p class="review-text">Мой ребёнок посещает детскую группу, и я просто в восторге! За короткий срок сын стал более уверенным, нашёл новых друзей и с удовольствием ходит на занятия.</p><div class="review-author"><div class="review-avatar"><img src="https://lh3.googleusercontent.com/a-/ALV-UjUxQUoZuryEhEv11eyOLok1Ohpy2E7gkuPmCZX6uA8mG_mnRagq=s128-c0x00000000-cc-rp-mo" alt=""></div><div><div class="review-name">igor slovo</div><div class="review-date">Август 2024</div></div></div></div>
+    </div>
+    <div class="reviews-more reveal"><a href="https://www.google.com/maps/place/AlehKireyeuStudio" target="_blank" data-i18n="rev_more">Все отзывы на Google</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <p class="cta-label" data-i18n="cta_label">Сделайте первый шаг</p>
+  <h2 class="cta-title" data-i18n="cta_title">Перезвоним и поможем выбрать удобную группу.</h2>
+  <p class="cta-sub" data-i18n="cta_sub">Без обязательств. Пробное занятие поможет понять, подходит ли студия именно вам.</p>
+  <form class="cta-form" onsubmit="handleCtaForm(event)">
+    <input class="cta-input" type="tel" placeholder="+48 ___ ___ ___" id="ctaPhone" autocomplete="tel">
+    <button type="submit" class="cta-btn" data-i18n="cta_btn">Записаться</button>
+  </form>
+  <p class="cta-privacy" data-i18n="cta_privacy">Не передаём контакты третьим лицам</p>
+  <p class="cta-phone"><span data-i18n="cta_phone_text">Или позвоните сами:</span> <a href="tel:+48571931404">+48 571 931 404</a></p>
+</section>
+
+<!-- MAP -->
+<section id="location" style="padding:0; background:var(--bg2);">
+  <div style="max-width:var(--max);margin:0 auto;padding:80px 32px;">
+    <p class="section-label" data-i18n="map_label">Как нас найти</p>
+    <h2 class="section-title" style="margin-bottom:32px" data-i18n="map_title">Мы в центре Вроцлава</h2>
+    <div style="display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:start;" class="map-grid">
+      <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border);height:380px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.3!2d17.0380!3d51.1100!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc27b0000001%3A0x1!2sul.%20Pi%C5%82sudskiego%2074%2C%20Wroc%C5%82aw!5e0!3m2!1sru!2spl!4v1700000000000"
+          width="100%" height="100%" style="border:0;display:block;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div style="padding:32px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
+        <p style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px" data-i18n="map_label">Адрес</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;line-height:1.3;margin-bottom:16px">ul. Piłsudskiego 74,<br>Wrocław</p>
+        <p style="font-size:14px;color:var(--text2);margin-bottom:20px;line-height:1.6" data-i18n="map_desc">Рядом с центром города. Удобная остановка транспорта.</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=ul.+Pi%C5%82sudskiego+74,+Wroc%C5%82aw" target="_blank"
+          style="display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--accent);text-decoration:none;" data-i18n="map_btn">
+          Построить маршрут →
+        </a>
+        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
+          <p style="font-size:13px;color:var(--text2);margin-bottom:6px" data-i18n="map_phone_label">Телефон</p>
+          <a href="tel:+48571931404" style="font-size:17px;color:var(--text);text-decoration:none;font-weight:500">+48 571 931 404</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo"><img src="https://alehkireyeu.art/wp-content/uploads/2025/01/logo.svg" alt="AlehKireyeuStudio"></div>
+        <p class="footer-desc" data-i18n="footer_desc">Студия актёрского мастерства во Вроцлаве. Офлайн-занятия для детей, подростков и взрослых.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/alehkireyeustudio" target="_blank" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/alehkireyeustudio" target="_blank" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/48571931404" target="_blank" class="social-link" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="https://t.me/alehkireyeustudio" target="_blank" class="social-link" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer_col1">Курсы</h5>
+        <ul>
+          <li><a href="vzroslaya.html" data-i18n="c1_h">Взрослая студия</a></li>
+          <li><a href="detskaya.html" data-i18n="c2_h">Детская студия</a></li>
+          <li><a href="podrostok.html" data-i18n="c3_h">Подростковая студия</a></li>
+          <li><a href="#" onclick="openModal()" data-i18n="c4_h">Бизнес-тренинги</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer_col2">Контакты</h5>
+        <ul>
+          <li><a href="tel:+48571931404">+48 571 931 404</a></li>
+          <li><a href="https://www.google.com/maps/place/AlehKireyeuStudio" target="_blank" data-i18n="footer_map">Вроцлав, карта</a></li>
+          <li><a href="#schedule" data-i18n="nav_schedule">Расписание</a></li>
+          <li><a href="#" onclick="openModal()" data-i18n="nav_cta">Записаться</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AlehKireyeuStudio</span>
+      <span class="footer-phone"><a href="tel:+48571931404">+48 571 931 404</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="formContent">
+      <p class="modal-tag" data-i18n="modal_tag">Студия во Вроцлаве</p>
+      <h2 data-i18n="modal_title">Записаться на пробное</h2>
+      <p class="modal-sub" data-i18n="modal_sub">Оставьте контакт — мы перезвоним, ответим на вопросы и поможем выбрать удобное время.</p>
+      <form onsubmit="handleModalForm(event)">
+        <div class="form-group"><label data-i18n="f_name">Ваше имя</label><input type="text" placeholder="Олег" required></div>
+        <div class="form-row">
+          <div class="form-group"><label data-i18n="f_phone">Телефон</label><input type="tel" placeholder="+48 571 ..." required></div>
+          <div class="form-group"><label data-i18n="f_messenger">Мессенджер</label>
+            <select>
+              <option>WhatsApp</option><option>Telegram</option><option>Viber</option>
+              <option data-i18n="f_call">Только звонок</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label data-i18n="f_for">Для кого занятия</label>
+          <select>
+            <option data-i18n="f_for1">Для себя (взрослый)</option>
+            <option data-i18n="f_for2">Ребёнок 7–11 лет</option>
+            <option data-i18n="f_for3">Подросток 12–17 лет</option>
+            <option data-i18n="f_for4">Корпоративный запрос</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit" data-i18n="f_submit">Отправить заявку</button>
+        <p class="form-privacy" data-i18n="cta_privacy">Не передаём контакты третьим лицам</p>
+      </form>
+    </div>
+    <div id="formSuccess" class="form-success" style="display:none">
+      <div class="form-success-icon">✓</div>
+      <h3 data-i18n="success_h">Заявка принята!</h3>
+      <p data-i18n="success_p">Олег свяжется с вами в ближайшее время. До встречи на сцене!</p>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" data-i18n="toast_text">Заявка отправлена!</div>
+
+<div id="tweaks-panel">
+  <h4>Tweaks</h4>
+  <div class="tweak-row"><label>Акцентный цвет</label>
+    <select onchange="applyTweak('accentColor', this.value)">
+      <option value="#8B6F47">Бронза</option>
+      <option value="#5C7A5C">Зелёный</option>
+      <option value="#8C4A3A">Терракота</option>
+      <option value="#6B5B8C">Фиолетовый</option>
+    </select>
+  </div>
+  <div class="tweak-row"><label>Фон</label>
+    <select onchange="applyTweak('bgColor', this.value)">
+      <option value="#F8F5EF">Бежевый</option>
+      <option value="#F5F5F3">Холодный</option>
+      <option value="#FBF7F2">Тёплый белый</option>
+    </select>
+  </div>
+</div>
+
+<script src="forms.js"></script>
+<script src="content.js"></script>
+<script>
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accentColor": "#8B6F47",
+  "bgColor": "#F8F5EF"
+}/*EDITMODE-END*/;
+
+// ── TRANSLATIONS ──────────────────────────────────────────────
+const T = {
+  ru: {
+    nav_about:'О студии', nav_courses:'Курсы', nav_schedule:'Расписание', nav_oleg:'О нас', nav_reviews:'Отзывы', nav_cta:'Записаться',
+    hero_title:'Актёрские тренинги<br>во <em>Вроцлаве</em>',
+    hero_sub:'Убираем зажимы, возвращаем уверенность и свободу общения. Практические занятия с первого урока. Маленькие группы — реальный прогресс.',
+    hero_btn1:'Записаться на пробное', hero_btn2:'Смотреть курсы',
+    hero_rating:'5.0 на <a href="https://www.google.com/maps/place/AlehKireyeuStudio" target="_blank">Google Maps</a> · более 20 отзывов',
+    hero_badge:'лет театрального опыта',
+    stat1:'довольных родителей и учеников', stat2:'рейтинг на Google', stat3:'формата групп для любого возраста', stat4:'офлайн-студия в центре города',
+    why_label:'Почему выбирают нас', why_title:'Не просто курсы — пространство роста',
+    why1_h:'Практика с первого занятия', why1_p:'Каждый урок — камера и сцена. Никаких долгих теорий. Вы работаете, получаете обратную связь и видите результат сразу.',
+    why2_h:'Маленькие группы', why2_p:'Индивидуальный подход каждому. Пропустили занятие — приходите в параллельную группу. Мы хотим видеть ваш прогресс.',
+    why3_h:'20 лет опыта', why3_p:'Педагог Белорусской Академии искусств. Режиссёр-постановщик Минского государственного театра. Автор более 10 спектаклей.',
+    why4_h:'Сертификат студии', why4_p:'По окончании курса вы получаете фирменный сертификат AlehKireyeuStudio — подтверждение вашего пути.',
+    why5_h:'Развитие без потолка', why5_p:'После базового курса можно перейти на следующий уровень, участвовать в репетициях и постановке спектаклей.',
+    why6_h:'Результат в жизни', why6_p:'Уверенность на публике, лёгкость в общении, импровизация, голос — навыки, которые работают далеко за пределами сцены.',
+    courses_label:'Программы обучения', courses_title:'Курс для каждого',
+    c1_tag:'От 18 лет', c1_h:'Взрослая студия', c1_p:'Преодолей страхи, стань героем своей жизни. Уверенность, речь, импровизация, открытость — каждый четверг.',
+    c2_tag:'7–11 лет', c2_h:'Детская студия', c2_p:'Игра как способ стать увереннее. Ребёнок раскрывается, находит друзей и учится выражать себя. Флагман школы.',
+    c3_tag:'12–17 лет', c3_h:'Подростковая студия', c3_p:'Творческое развитие для будущих лидеров. Уверенность, самовыражение, командная работа — по субботам.',
+    c4_tag:'Корпоративным', c4_h:'Бизнес-тренинги', c4_p:'Командообразование, публичные выступления, уверенная речь для вашей команды. Формат под запрос.', c4_btn:'Узнать детали',
+    c_link:'Подробнее о курсе',
+    sch_label:'Расписание', sch_title:'Когда мы занимаемся', sch_th1:'День', sch_th2:'Время', sch_th3:'Группа',
+    day_wed:'Среда', day_thu:'Четверг', day_sat:'Суббота', day_sun:'Воскресенье',
+    grp_kids:'Дети', grp_adults:'Взрослые', grp_teens:'Подростки',
+    price_label:'Стоимость', price_title:'Прозрачные цены', price_h4:'💡 Акция — оплати месяц сразу',
+    price_note:'При оплате 4 занятий сразу — экономия 100 zł. Занятия действительны в любой группе.',
+    price_single:'Одно занятие отдельно — <strong>125 PLN</strong>',
+    price_sub:'Приходите на пробное занятие. Оставьте контакт, мы свяжемся и поможем выбрать удобное время.',
+    about_label:'Основатель студии', about_role:'Режиссёр-постановщик · Педагог · Художественный руководитель',
+    about_text1:'Более 20 лет в профессиональном театре. Режиссёр-постановщик Минского государственного театра, педагог актёрского мастерства в Белорусской Академии искусств. Автор более десятка спектаклей на профессиональных сценах Беларуси.',
+    about_text2:'Соучредитель и художественный руководитель независимого театра «Новый Театр». В 2024 году открыл студию во Вроцлаве — для тех, кто хочет расти, раскрываться и чувствовать себя живым.',
+    fact1:'лет опыта', fact2:'спектаклей-постановок',
+    rev_label:'Отзывы учеников', rev_title:'Говорят те, кто занимается', rev_more:'Все отзывы на Google',
+    cta_label:'Сделайте первый шаг', cta_title:'Оставьте контакт — мы перезвоним и расскажем всё',
+    cta_sub:'Без обязательств. Пробное занятие поможет понять, подходит ли студия именно вам.',
+    cta_btn:'Записаться', cta_privacy:'Не передаём контакты третьим лицам', cta_phone_text:'Или позвоните сами:',
+    footer_desc:'Студия актёрского мастерства во Вроцлаве. Офлайн-занятия для детей, подростков и взрослых.',
+    footer_col1:'Курсы', footer_col2:'Контакты', footer_map:'Вроцлав, карта',
+    modal_tag:'Студия во Вроцлаве', modal_title:'Записаться на пробное',
+    modal_sub:'Оставьте контакт — мы перезвоним, ответим на вопросы и поможем выбрать удобное время.',
+    f_name:'Ваше имя', f_phone:'Телефон', f_messenger:'Мессенджер', f_call:'Только звонок',
+    f_for:'Для кого занятия', f_for1:'Для себя (взрослый)', f_for2:'Ребёнок 7–11 лет', f_for3:'Подросток 12–17 лет', f_for4:'Корпоративный запрос',
+    f_submit:'Отправить заявку',
+    success_h:'Заявка принята!', success_p:'Олег свяжется с вами в ближайшее время. До встречи на сцене!',
+    map_label:'Как нас найти', map_title:'Мы в центре Вроцлава', map_desc:'Рядом с центром города. Удобная остановка транспорта.', map_btn:'Построить маршрут →', map_phone_label:'Телефон',
+    toast_text:'Заявка отправлена!', fb_call:'Позвонить'
+  },
+  pl: {
+    nav_about:'O studio', nav_courses:'Kursy', nav_schedule:'Harmonogram', nav_oleg:'O nas', nav_reviews:'Opinie', nav_cta:'Zapisz się',
+    hero_title:'Treningi aktorskie<br>we <em>Wrocławiu</em>',
+    hero_sub:'Usuwamy bloki, przywracamy pewność siebie i swobodę komunikacji. Praktyczne zajęcia od pierwszej lekcji. Małe grupy — realny postęp.',
+    hero_btn1:'Zapisz się na próbne', hero_btn2:'Zobacz kursy',
+    hero_rating:'5.0 na <a href="https://www.google.com/maps/place/AlehKireyeuStudio" target="_blank">Google Maps</a> · ponad 20 opinii',
+    hero_badge:'lat doświadczenia teatralnego',
+    stat1:'lat doświadczenia w teatrze i pedagogice', stat2:'ocena w Google', stat3:'formaty zajęć dla każdego wieku', stat4:'studio stacjonarne w centrum Wrocławia',
+    why_label:'Dlaczego nas wybierają', why_title:'Nie tylko kursy — przestrzeń rozwoju',
+    why1_h:'Praktyka od pierwszych zajęć', why1_p:'Każda lekcja — kamera i scena. Żadnej długiej teorii. Działasz, dostajesz informację zwrotną i widzisz efekty od razu.',
+    why2_h:'Małe grupy', why2_p:'Indywidualne podejście do każdego. Opuściłeś zajęcia — przyjdź do równoległej grupy. Zależy nam na Twoim postępie.',
+    why3_h:'20 lat doświadczenia', why3_p:'Pedagog Białoruskiej Akademii Sztuk. Reżyser Mińskiego Teatru Państwowego. Autor ponad 10 spektakli.',
+    why4_h:'Certyfikat studia', why4_p:'Po ukończeniu kursu otrzymujesz firmowy certyfikat AlehKireyeuStudio — potwierdzenie Twojej drogi.',
+    why5_h:'Rozwój bez limitu', why5_p:'Po kursie podstawowym możesz przejść na wyższy poziom, uczestniczyć w próbach i inscenizacji spektakli.',
+    why6_h:'Rezultat w życiu', why6_p:'Pewność siebie na publiczności, swoboda komunikacji, improwizacja, głos — umiejętności, które działają daleko poza sceną.',
+    courses_label:'Programy nauczania', courses_title:'Kurs dla każdego',
+    c1_tag:'Od 18 lat', c1_h:'Studio dla dorosłych', c1_p:'Pokonaj lęki, stań się bohaterem swojego życia. Pewność siebie, mowa, improwizacja — każdy czwartek.',
+    c2_tag:'7–11 lat', c2_h:'Studio dla dzieci', c2_p:'Gra jako sposób na pewność siebie. Dziecko otwiera się, znajduje przyjaciół i uczy się wyrażać siebie. Flagowy kurs szkoły.',
+    c3_tag:'12–17 lat', c3_h:'Studio dla nastolatków', c3_p:'Twórczy rozwój dla przyszłych liderów. Pewność siebie, wyrażanie siebie, praca zespołowa — w soboty.',
+    c4_tag:'Dla firm', c4_h:'Szkolenia biznesowe', c4_p:'Budowanie zespołu, wystąpienia publiczne, pewna mowa dla Twojego zespołu. Format na zamówienie.', c4_btn:'Zapytaj o szczegóły',
+    c_link:'Więcej o kursie',
+    sch_label:'Harmonogram', sch_title:'Kiedy się uczymy', sch_th1:'Dzień', sch_th2:'Godzina', sch_th3:'Grupa',
+    day_wed:'Środa', day_thu:'Czwartek', day_sat:'Sobota', day_sun:'Niedziela',
+    grp_kids:'Dzieci', grp_adults:'Dorośli', grp_teens:'Nastolatkowie',
+    price_label:'Cennik', price_title:'Przejrzyste ceny', price_h4:'💡 Promocja — opłać miesiąc od razu',
+    price_note:'Przy opłacie za 4 zajęcia od razu — oszczędność 100 zł. Zajęcia ważne w każdej grupie.',
+    price_single:'Jedno zajęcie osobno — <strong>125 PLN</strong>',
+    price_sub:'Przyjdź na próbne zajęcia. Zostaw kontakt, oddzwonimy i pomożemy wybrać wygodny termin.',
+    about_label:'Założyciel studia', about_role:'Reżyser · Pedagog · Dyrektor artystyczny',
+    about_text1:'Ponad 20 lat w teatrze zawodowym. Reżyser Mińskiego Teatru Państwowego, pedagog aktorstwa w Białoruskiej Akademii Sztuk Pięknych. Autor ponad dziesięciu spektakli na profesjonalnych scenach Białorusi.',
+    about_text2:'Współzałożyciel i dyrektor artystyczny niezależnego teatru „Nowy Teatr". W 2024 roku otworzył studio we Wrocławiu — dla tych, którzy chcą się rozwijać, otwierać i czuć się żywymi.',
+    fact1:'lat doświadczenia', fact2:'spektakli-inscenizacji',
+    rev_label:'Opinie uczniów', rev_title:'Mówią ci, którzy ćwiczą', rev_more:'Wszystkie opinie w Google',
+    cta_label:'Zrób pierwszy krok', cta_title:'Zostaw kontakt — oddzwonimy i opowiemy wszystko',
+    cta_sub:'Bez zobowiązań. Próbne zajęcia pomogą zrozumieć, czy studio jest właśnie dla Ciebie.',
+    cta_btn:'Zapisz się', cta_privacy:'Nie przekazujemy kontaktów osobom trzecim', cta_phone_text:'Lub zadzwoń sam:',
+    footer_desc:'Studio aktorskie we Wrocławiu. Stacjonarne zajęcia dla dzieci, nastolatków i dorosłych.',
+    footer_col1:'Kursy', footer_col2:'Kontakty', footer_map:'Wrocław, mapa',
+    modal_tag:'Studio we Wrocławiu', modal_title:'Zapisz się na próbne',
+    modal_sub:'Zostaw kontakt — oddzwonimy, odpowiemy na pytania i pomożemy wybrać wygodny termin.',
+    f_name:'Twoje imię', f_phone:'Telefon', f_messenger:'Komunikator', f_call:'Tylko telefon',
+    f_for:'Dla kogo zajęcia', f_for1:'Dla siebie (dorosły)', f_for2:'Dziecko 7–11 lat', f_for3:'Nastolatek 12–17 lat', f_for4:'Zapytanie firmowe',
+    f_submit:'Wyślij zgłoszenie',
+    success_h:'Zgłoszenie przyjęte!', success_p:'Oleg skontaktuje się z Tobą wkrótce. Do zobaczenia na scenie!',
+    map_label:'Jak nas znaleźć', map_title:'Jesteśmy w centrum Wrocławia', map_desc:'Blisko centrum miasta. Wygodny przystanek komunikacji miejskiej.', map_btn:'Wyznacz trasę →', map_phone_label:'Telefon',
+    toast_text:'Zgłoszenie wysłane!', fb_call:'Zadzwoń'
+  }
+};
+
+let currentLang = localStorage.getItem('lang') || 'ru';
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (T[lang][key] !== undefined) el.innerHTML = T[lang][key];
+  });
+  // Update html lang attr
+  document.documentElement.lang = lang;
+  // Update toggle buttons
+  ['ru','pl'].forEach(l => {
+    const btn = document.getElementById('btn-' + l);
+    const mbtn = document.getElementById('mbtn-' + l);
+    if (btn) btn.classList.toggle('active', l === lang);
+    if (mbtn) mbtn.classList.toggle('active', l === lang);
+  });
+}
+
+// Apply on load
+setLang(currentLang);
+
+// ── SCROLL REVEAL ──────────────────────────────────────────────
+const revEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+revEls.forEach(el => obs.observe(el));
+setTimeout(() => revEls.forEach(el => el.classList.add('visible')), 600);
+
+// Nav scroll
+window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20));
+
+// Modal
+function openModal() {
+  document.getElementById('formContent').style.display = 'block';
+  document.getElementById('formSuccess').style.display = 'none';
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow = ''; }
+function closeModalOnBg(e) { if (e.target === document.getElementById('modalOverlay')) closeModal(); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+function handleModalForm(e) {
+  e.preventDefault();
+  const f = e.target;
+  const data = {
+    name:      f.querySelector('input[type=text]')?.value || '',
+    phone:     f.querySelector('input[type=tel]')?.value || '',
+    messenger: f.querySelector('select')?.value || '',
+    for_whom:  f.querySelectorAll('select')[1]?.value || '',
+    page:      'Главная страница'
+  };
+  const btn = f.querySelector('.form-submit');
+  btn.textContent = '...'; btn.disabled = true;
+  submitForm(data, () => {
+    document.getElementById('formContent').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+    setTimeout(closeModal, 3000);
+  });
+}
+function handleCtaForm(e) {
+  e.preventDefault();
+  const phone = e.target.querySelector('input[type=tel]')?.value || '';
+  submitForm({ phone, page: 'Главная — CTA блок' }, () => {
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3200);
+    e.target.reset();
+  });
+}
+
+// Mobile menu
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+// Tweaks
+window.addEventListener('message', e => {
+  if (e.data?.type === '__activate_edit_mode') document.getElementById('tweaks-panel').classList.add('active');
+  if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').classList.remove('active');
+});
+window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+function applyTweak(key, value) {
+  if (key === 'accentColor') document.documentElement.style.setProperty('--accent', value);
+  if (key === 'bgColor') document.documentElement.style.setProperty('--bg', value);
+  window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: value } }, '*');
+}
+</script>
+
+<!-- FLOATING CONTACT BAR (mobile) -->
+<div class="float-bar">
+  <a href="tel:+48571931404" class="float-btn float-btn-call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+    <span data-i18n="fb_call">Позвонить</span>
+  </a>
+  <a href="https://wa.me/48571931404" target="_blank" class="float-btn float-btn-wa">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <a href="https://t.me/alehkireyeustudio" target="_blank" class="float-btn float-btn-tg">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+    Telegram
+  </a>
+</div>
+
+<script src="edit-mode.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
+    }
+  });
+}
+</script>
+</body>
+</html>

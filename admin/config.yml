@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "uploads"
+
+locale: "ru"
+
+site_url: https://kireyeu.su
+display_url: https://kireyeu.su
+
+collections:
+  - name: "site"
+    label: "Контент сайта"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "Контакты, цены и фото"
+        file: "content/site.json"
+        description: "Измените нужное поле и нажмите Publish — сайт обновится за минуту."
+        fields:
+          - { label: "Телефон (как показывать на сайте)", name: "phone_display", widget: "string" }
+          - { label: "Телефон для кнопки звонка", name: "phone_tel", widget: "string", hint: "Без пробелов, например: +48571931404" }
+          - { label: "WhatsApp — номер", name: "whatsapp", widget: "string", hint: "Только цифры, например: 48571931404" }
+          - { label: "Telegram — имя пользователя", name: "telegram", widget: "string", hint: "Без @, например: alehkireyeustudio" }
+          - { label: "Instagram — имя пользователя", name: "instagram", widget: "string", hint: "Без @" }
+          - { label: "Адрес студии", name: "address", widget: "string" }
+          - { label: "Цена за месяц (акция)", name: "price_month", widget: "string", hint: "Например: 400" }
+          - { label: "Старая цена (зачёркнутая)", name: "price_old", widget: "string", hint: "Например: 500 PLN" }
+          - { label: "Фото на ГЛАВНОЙ странице", name: "hero_image_index", widget: "image", required: false }
+          - { label: "Фото — Взрослая студия", name: "hero_image_adults", widget: "image", required: false }
+          - { label: "Фото — Детская студия", name: "hero_image_kids", widget: "image", required: false }
+          - { label: "Фото — Подростковая студия", name: "hero_image_teens", widget: "image", required: false }

@@ -7,8 +7,8 @@ public_folder: "uploads"
 
 locale: "ru"
 
-site_url: https://kireyeu.su
-display_url: https://kireyeu.su
+site_url: https://alehkireyeu.com
+display_url: https://alehkireyeu.com
 
 collections:
   - name: "site"

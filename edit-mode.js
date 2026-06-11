@@ -56,7 +56,7 @@
   toolbar.className = 'edit-toolbar';
   toolbar.innerHTML = `
     <span class="edit-toolbar-tag">Режим редактирования</span>
-    <span class="edit-toolbar-title">Кликните на любой текст чтобы изменить. Изменений: <span id="changes-count">0</span></span>
+    <span class="edit-toolbar-title">Кликните на текст чтобы изменить. Для польского — переключите язык на PL и редактируйте. Изменений: <span id="changes-count">0</span></span>
     <button class="secondary" onclick="window.editMode.changeFavicon()">🎨 Иконка сайта</button>
     <button class="secondary" onclick="window.editMode.exit()">Выйти</button>
     <button onclick="window.editMode.save()">Скачать обновлённый сайт</button>
@@ -175,6 +175,19 @@
       input.click();
     },
     save() {
+      // ── Collect text changes on translated elements (data-i18n) ──
+      // so they persist into the page's translation object T for the
+      // currently displayed language (fixes Polish edits not saving).
+      const lang = document.documentElement.lang || 'ru';
+      const tPatches = [];
+      document.querySelectorAll('[data-editable][data-i18n]').forEach(el => {
+        const oldVal = el.dataset.originalText;
+        const newVal = el.innerHTML;
+        if (oldVal != null && oldVal !== newVal) {
+          tPatches.push({ key: el.dataset.i18n, oldVal, newVal });
+        }
+      });
+
       // Clean up edit attributes from clone
       const html = document.documentElement.outerHTML;
       const tempDoc = document.implementation.createHTMLDocument('');
@@ -197,7 +210,16 @@
       // Remove edit-mode.js script tag
       tempDoc.querySelectorAll('script[src*="edit-mode"]').forEach(s => s.remove());
 
-      const finalHtml = '<!DOCTYPE html>\n' + tempDoc.documentElement.outerHTML;
+      let finalHtml = '<!DOCTYPE html>\n' + tempDoc.documentElement.outerHTML;
+
+      // Apply translation-object patches for the current language
+      tPatches.forEach(({ key, oldVal, newVal }) => {
+        const search = key + ":'" + oldVal + "'";
+        const replace = key + ":'" + newVal + "'";
+        if (finalHtml.indexOf(search) !== -1) {
+          finalHtml = finalHtml.split(search).join(replace);
+        }
+      });
       const filename = window.location.pathname.split('/').pop() || 'index.html';
 
       const blob = new Blob([finalHtml], { type: 'text/html;charset=utf-8' });

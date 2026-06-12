@@ -166,6 +166,7 @@ footer{background:var(--text);color:rgba(248,245,239,0.5);padding:40px 16px 96px
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
 
 /* DESKTOP OVERRIDES */
+@media(max-width:900px){.hero-img{width:100%!important;height:auto!important;max-height:380px;object-fit:cover;}}
 @media(min-width:901px){
   .float-bar{display:none;}
   .burger{display:none;}
@@ -253,7 +254,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="hero-details">
         <div class="hero-detail"><strong data-i18n="day_thu">Четверг</strong> 19:00–21:00</div>
-        <div class="hero-detail"><strong data-i18n="det_group">Маленькая группа</strong></div>
+        <div class="hero-detail"><strong data-i18n="det_group">До 10</strong> <span data-i18n="det_size">человек в группе</span></div>
         <div class="hero-detail"><strong>Wrocław</strong> офлайн</div>
       </div>
     </div>
@@ -422,7 +423,7 @@ const T = {
     hero_title:'Стань героем<br>своей <em>жизни</em>',
     hero_sub:'Актёрские тренинги для взрослых во Вроцлаве. Убираем зажимы, возвращаем уверенность, учим говорить так, чтобы слышали.',
     hero_btn:'Записаться на пробное',hero_btn2:'Расписание и цены',
-    day_thu:'Четверг',det_group:'Маленькая группа',
+    day_thu:'Четверг',det_group:'До 10',det_size:'человек в группе',
     res_label:'Что вы получите',res_title:'Результаты после курса',
     r1_h:'Уверенность на публике',r1_p:'Выступления, переговоры, презентации — перестаёте бояться быть в центре внимания.',
     r2_h:'Лёгкость в общении',r2_p:'Импровизация, живой контакт, умение слышать и быть услышанным — в работе и жизни.',
@@ -463,7 +464,7 @@ const T = {
     hero_title:'Stań się bohaterem<br>swojego <em>życia</em>',
     hero_sub:'Treningi aktorskie dla dorosłych we Wrocławiu. Usuwamy bloki, przywracamy pewność siebie, uczymy mówić tak, żeby słyszano.',
     hero_btn:'Zapisz się na próbne',hero_btn2:'Harmonogram i ceny',
-    day_thu:'Czwartek',det_group:'Mała grupa',
+    day_thu:'Czwartek',det_group:'Do 10',det_size:'osób w grupie',
     res_label:'Co otrzymasz',res_title:'Efekty po kursie',
     r1_h:'Pewność siebie na scenie',r1_p:'Wystąpienia, negocjacje, prezentacje — przestajesz bać się być w centrum uwagi.',
     r2_h:'Swoboda komunikacji',r2_p:'Improwizacja, żywy kontakt, umiejętność słuchania — w pracy i w życiu.',
@@ -559,5 +560,6 @@ if(window.innerWidth >= 901) { const nl = document.querySelector('.nav-links-des
 window.addEventListener('resize', () => { const nl = document.querySelector('.nav-links-desktop'); if(nl) nl.style.display = window.innerWidth>=901 ? 'flex' : 'none'; });
 </script>
 <script src="edit-mode.js"></script>
+<script src="cookies.js"></script>
 </body>
 </html>

@@ -135,6 +135,7 @@ footer{background:var(--text);color:rgba(248,245,239,0.5);padding:40px 16px 96px
 .form-success p{font-size:14px;color:var(--text2);}
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(40px);background:var(--text);color:var(--bg);padding:12px 22px;border-radius:8px;font-size:14px;transition:transform 0.4s;z-index:9999;pointer-events:none;opacity:0;}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
+@media(max-width:900px){.hero-img{width:100%!important;height:auto!important;max-height:380px;object-fit:cover;}}
 @media(min-width:901px){
   .float-bar{display:none;}.burger{display:none;}
   .nav-cta{display:flex;}.nav-inner{padding:0 32px;height:64px;}.nav-logo img{height:32px;}
@@ -203,14 +204,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="hero-tag" data-i18n="hero_tag">12–17 лет · Суббота 12:00–14:00</span>
       <h1 class="hero-title" data-i18n="hero_title">Развитие для<br>будущих <em>лидеров</em></h1>
       <p class="hero-sub" data-i18n="hero_sub">Театральная студия для подростков во Вроцлаве. Уверенность, самовыражение, живое общение — в безопасной и интересной среде.</p>
-      <img class="hero-img" src="uploads/podrost_1.png" alt="Подростковая студия">
+      <img class="hero-img" src="uploads/teens.png" alt="Подростковая студия" style="width: 404px; height: 614px">
       <div class="hero-actions">
         <button class="btn-primary" onclick="openModal()" data-i18n="hero_btn">Записаться на пробное</button>
         <a href="#schedule-price" class="btn-outline" data-i18n="hero_btn2">Расписание и цены</a>
       </div>
       <div class="hero-details">
         <div class="hero-detail"><strong data-i18n="d_sat">Суббота</strong> 12:00–14:00</div>
-        <div class="hero-detail"><strong data-i18n="det_group">Маленькая группа</strong></div>
+        <div class="hero-detail"><strong data-i18n="det_group">До 10</strong> <span data-i18n="det_size">человек в группе</span></div>
         <div class="hero-detail"><strong>Wrocław</strong> офлайн</div>
       </div>
     </div>
@@ -243,7 +244,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="program-item"><span class="program-num">02</span><div><h4 data-i18n="p2_h">Этюды и импровизация</h4><p data-i18n="p2_p">Сцены из жизни — подростки учатся реагировать и действовать спонтанно.</p></div></li>
           <li class="program-item"><span class="program-num">03</span><div><h4 data-i18n="p3_h">Работа с текстом и голосом</h4><p data-i18n="p3_p">Монологи, диалоги, дикция — умение говорить так, чтобы слышали.</p></div></li>
           <li class="program-item"><span class="program-num">04</span><div><h4 data-i18n="p4_h">Взаимодействие и доверие</h4><p data-i18n="p4_p">Упражнения на контакт и командную работу внутри группы.</p></div></li>
-          <li class="program-item"><span class="program-num">05</span><div><h4 data-i18n="p5_h">Репетиции и постановка</h4><p data-i18n="p5_p">Работаем над общим спектаклем — от идеи до выхода на сцену.</p></div></li>
+          <li class="program-item"><span class="program-num">05</span><div><h4 data-i18n="p5_h">Драматургия в этюдах</h4><p data-i18n="p5_p">Разбираем характеры и ситуации через этюды — учимся существовать в предлагаемых обстоятельствах.</p></div></li>
         </ul>
       </div>
       <div class="reveal">
@@ -362,7 +363,7 @@ const T={
     hero_title:'Развитие для<br>будущих <em>лидеров</em>',
     hero_sub:'Театральная студия для подростков во Вроцлаве. Уверенность, самовыражение, живое общение — в безопасной и интересной среде.',
     hero_btn:'Записаться на пробное',hero_btn2:'Расписание и цены',
-    d_sat:'Суббота',det_group:'Маленькая группа',
+    d_sat:'Суббота',det_group:'До 10',det_size:'человек в группе',
     res_label:'Что даёт студия',res_title:'Навыки на всю жизнь',
     r1_h:'Уверенность в себе',r1_p:'Подросток учится выступать, говорить и держаться перед людьми — без страха.',
     r2_h:'Самовыражение',r2_p:'Находят свой голос, стиль, эмоции — и учатся выражать их ярко.',
@@ -375,7 +376,7 @@ const T={
     p2_h:'Этюды и импровизация',p2_p:'Сцены из жизни — подростки учатся реагировать и действовать спонтанно.',
     p3_h:'Работа с текстом и голосом',p3_p:'Монологи, диалоги, дикция — умение говорить так, чтобы слышали.',
     p4_h:'Взаимодействие и доверие',p4_p:'Упражнения на контакт и командную работу внутри группы.',
-    p5_h:'Репетиции и постановка',p5_p:'Работаем над общим спектаклем — от идеи до выхода на сцену.',
+    p5_h:'Драматургия в этюдах',p5_p:'Разбираем характеры и ситуации через этюды — учимся существовать в предлагаемых обстоятельствах.',
     fw_title:'Подойдёт, если подросток...',
     fw1:'Стесняется или не знает куда деть энергию',fw2:'Хочет научиться говорить уверенно и убедительно',
     fw3:'Ищет своё место и интересную среду',fw4:'Хочет попробовать себя на сцене',fw5:'Интересуется творчеством, кино, театром',
@@ -401,7 +402,7 @@ const T={
     hero_title:'Rozwój dla<br>przyszłych <em>liderów</em>',
     hero_sub:'Teatralne studio dla nastolatków we Wrocławiu. Pewność siebie, wyrażanie siebie, żywa komunikacja — w bezpiecznym i ciekawym środowisku.',
     hero_btn:'Zapisz się na próbne',hero_btn2:'Harmonogram i ceny',
-    d_sat:'Sobota',det_group:'Mała grupa',
+    d_sat:'Sobota',det_group:'Do 10',det_size:'osób w grupie',
     res_label:'Co daje studio',res_title:'Umiejętności na całe życie',
     r1_h:'Pewność siebie',r1_p:'Nastolatek uczy się występować, mówić i zachowywać się przed ludźmi — bez lęku.',
     r2_h:'Wyrażanie siebie',r2_p:'Odnajdują swój głos, styl, emocje — i uczą się wyrażać je wyraziście.',
@@ -414,7 +415,7 @@ const T={
     p2_h:'Etiudy i improwizacja',p2_p:'Sceny z życia — nastolatkowie uczą się reagować i działać spontanicznie.',
     p3_h:'Praca z tekstem i głosem',p3_p:'Monologi, dialogi, dykcja — umiejętność mówienia tak, żeby słyszano.',
     p4_h:'Interakcja i zaufanie',p4_p:'Ćwiczenia na kontakt i pracę zespołową w grupie.',
-    p5_h:'Próby i inscenizacja',p5_p:'Pracujemy nad wspólnym spektaklem — od pomysłu do wyjścia na scenę.',
+    p5_h:'Dramaturgia w etiudach',p5_p:'Analizujemy charaktery i sytuacje poprzez etiudy — uczymy się istnieć w zadanych okolicznościach.',
     fw_title:'Odpowiednie, jeśli nastolatek...',
     fw1:'Jest nieśmiały lub nie wie co zrobić z energią',fw2:'Chce nauczyć się mówić pewnie i przekonująco',
     fw3:'Szuka swojego miejsca i ciekawego środowiska',fw4:'Chce spróbować się na scenie',fw5:'Interesuje się twórczością, kinem, teatrem',
@@ -482,5 +483,6 @@ if(window.innerWidth>=901){const nl=document.querySelector('.nav-links-desktop')
 window.addEventListener('resize',()=>{const nl=document.querySelector('.nav-links-desktop');if(nl)nl.style.display=window.innerWidth>=901?'flex':'none';});
 </script>
 <script src="edit-mode.js"></script>
+<script src="cookies.js"></script>
 </body>
 </html>

@@ -145,6 +145,7 @@ footer{background:var(--text);color:rgba(248,245,239,0.5);padding:40px 16px 96px
 .review-avatar img{width:100%;height:100%;object-fit:cover;}
 .review-name{font-size:13px;font-weight:500;}
 .review-date{font-size:11px;color:var(--text2);}
+@media(max-width:900px){.hero-img{width:100%!important;height:auto!important;max-height:380px;object-fit:cover;}}
 @media(min-width:901px){
   .float-bar{display:none;}
   .burger{display:none;}
@@ -239,11 +240,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="section-title reveal" data-i18n="res_title">Результаты, которые видят родители</h2>
     <div class="results-grid">
       <div class="result-card reveal"><div class="result-num">01</div><h3 data-i18n="r1_h">Уверенность в себе</h3><p data-i18n="r1_p">Ребёнок перестаёт бояться выступать, говорить перед классом, заводить знакомства.</p></div>
-      <div class="result-card reveal"><div class="result-num">02</div><h3 data-i18n="r2_h">Новые друзья</h3><p data-i18n="r2_p">Маленькая группа — тёплая атмосфера. Дети сдружаются уже на первых занятиях.</p></div>
+      <div class="result-card reveal"><div class="result-num">02</div><h3 data-i18n="r2_h">Новые друзья</h3><p data-i18n="r2_p">Маленькая группа — тёплая атмосфера. Дети знакомятся и находят друзей уже на первых занятиях.</p></div>
       <div class="result-card reveal"><div class="result-num">03</div><h3 data-i18n="r3_h">Речь и голос</h3><p data-i18n="r3_p">Чёткость, интонация, умение выразить мысль — навыки, которые помогают в школе.</p></div>
       <div class="result-card reveal"><div class="result-num">04</div><h3 data-i18n="r4_h">Фантазия и творчество</h3><p data-i18n="r4_p">Дети начинают рассуждать и фантазировать по-новому, увлечённее и глубже.</p></div>
       <div class="result-card reveal"><div class="result-num">05</div><h3 data-i18n="r5_h">Командная работа</h3><p data-i18n="r5_p">Умение слышать партнёра, работать вместе, уважать других — через игру и этюды.</p></div>
-      <div class="result-card reveal"><div class="result-num">06</div><h3 data-i18n="r6_h">Выступление на сцене</h3><p data-i18n="r6_p">В конце курса дети участвуют в показе — настоящий праздник для всей семьи.</p></div>
+      <div class="result-card reveal"><div class="result-num">06</div><h3 data-i18n="r6_h">Радость и интерес</h3><p data-i18n="r6_p">Ребёнок ходит на занятия с удовольствием и ждёт каждой встречи.</p></div>
     </div>
   </div>
 </section>
@@ -259,7 +260,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="program-item"><span class="program-num">02</span><div><h4 data-i18n="p2_h">Этюды и импровизация</h4><p data-i18n="p2_p">Короткие сценки — дети учатся реагировать, фантазировать, действовать.</p></div></li>
           <li class="program-item"><span class="program-num">03</span><div><h4 data-i18n="p3_h">Работа с голосом</h4><p data-i18n="p3_p">Дыхание, дикция, выразительность — в доступной игровой форме.</p></div></li>
           <li class="program-item"><span class="program-num">04</span><div><h4 data-i18n="p4_h">Взаимодействие</h4><p data-i18n="p4_p">Упражнения на доверие и командную работу. Дети учатся друг у друга.</p></div></li>
-          <li class="program-item"><span class="program-num">05</span><div><h4 data-i18n="p5_h">Репетиции и показ</h4><p data-i18n="p5_p">В финале — маленький спектакль. Каждый ребёнок выходит на сцену.</p></div></li>
+          <li class="program-item"><span class="program-num">05</span><div><h4 data-i18n="p5_h">Этюды и игры-истории</h4><p data-i18n="p5_p">Придумываем и разыгрываем небольшие истории — ребёнок раскрепощается и учится выражать себя.</p></div></li>
         </ul>
       </div>
       <div class="reveal">
@@ -395,17 +396,17 @@ const T={
     d_wed:'Среда',d_sat:'Суббота',d_sun:'Воскресенье',
     res_label:'Что даёт студия ребёнку',res_title:'Результаты, которые видят родители',
     r1_h:'Уверенность в себе',r1_p:'Ребёнок перестаёт бояться выступать, говорить перед классом, заводить знакомства.',
-    r2_h:'Новые друзья',r2_p:'Маленькая группа — тёплая атмосфера. Дети сдружаются уже на первых занятиях.',
+    r2_h:'Новые друзья',r2_p:'Маленькая группа — тёплая атмосфера. Дети знакомятся и находят друзей уже на первых занятиях.',
     r3_h:'Речь и голос',r3_p:'Чёткость, интонация, умение выразить мысль — навыки, которые помогают в школе.',
     r4_h:'Фантазия и творчество',r4_p:'Дети начинают рассуждать и фантазировать по-новому, увлечённее и глубже.',
     r5_h:'Командная работа',r5_p:'Умение слышать партнёра, работать вместе, уважать других — через игру и этюды.',
-    r6_h:'Выступление на сцене',r6_p:'В конце курса дети участвуют в показе — настоящий праздник для всей семьи.',
+    r6_h:'Радость и интерес',r6_p:'Ребёнок ходит на занятия с удовольствием и ждёт каждой встречи.',
     prog_label:'Программа',prog_title:'Как проходят занятия',
     p1_h:'Театральные игры',p1_p:'Занятия начинаются с игр — снимаем напряжение и включаем ребёнка в процесс.',
     p2_h:'Этюды и импровизация',p2_p:'Короткие сценки — дети учатся реагировать, фантазировать, действовать.',
     p3_h:'Работа с голосом',p3_p:'Дыхание, дикция, выразительность — в доступной игровой форме.',
     p4_h:'Взаимодействие',p4_p:'Упражнения на доверие и командную работу. Дети учатся друг у друга.',
-    p5_h:'Репетиции и показ',p5_p:'В финале — маленький спектакль. Каждый ребёнок выходит на сцену.',
+    p5_h:'Этюды и игры-истории',p5_p:'Придумываем и разыгрываем небольшие истории — ребёнок раскрепощается и учится выражать себя.',
     fw_title:'Подойдёт вашему ребёнку, если...',
     fw1:'Стесняется, боится выступать или говорить вслух',fw2:'Хочет новых друзей и живого общения',
     fw3:'Любит игры, истории, перевоплощения',fw4:'Активный, но нуждается в направлении энергии',
@@ -436,17 +437,17 @@ const T={
     d_wed:'Środa',d_sat:'Sobota',d_sun:'Niedziela',
     res_label:'Co daje studio dziecku',res_title:'Efekty, które widzą rodzice',
     r1_h:'Pewność siebie',r1_p:'Dziecko przestaje bać się wystąpień, mówienia przed klasą, nawiązywania znajomości.',
-    r2_h:'Nowi przyjaciele',r2_p:'Mała grupa — ciepła atmosfera. Dzieci zaprzyjaźniają się już na pierwszych zajęciach.',
+    r2_h:'Nowi przyjaciele',r2_p:'Mała grupa — ciepła atmosfera. Dzieci poznają się i zawierają przyjaźnie już na pierwszych zajęciach.',
     r3_h:'Mowa i głos',r3_p:'Wyrazistość, intonacja, umiejętność wyrażania myśli — umiejętności przydatne w szkole.',
     r4_h:'Fantazja i kreatywność',r4_p:'Dzieci zaczynają rozumować i fantazjować w nowy, głębszy i bardziej twórczy sposób.',
     r5_h:'Praca zespołowa',r5_p:'Umiejętność słuchania partnera, wspólnej pracy, szanowania innych — przez zabawę.',
-    r6_h:'Występ na scenie',r6_p:'Na koniec kursu dzieci biorą udział w pokazie — prawdziwe święto dla całej rodziny.',
+    r6_h:'Radość i zainteresowanie',r6_p:'Dziecko chodzi na zajęcia z przyjemnością i czeka na każde spotkanie.',
     prog_label:'Program',prog_title:'Jak przebiegają zajęcia',
     p1_h:'Gry teatralne',p1_p:'Zajęcia zaczynają się od gier — rozładowujemy napięcie i wciągamy dziecko w proces.',
     p2_h:'Etiudy i improwizacja',p2_p:'Krótkie scenki — dzieci uczą się reagować, fantazjować, działać.',
     p3_h:'Praca z głosem',p3_p:'Oddech, dykcja, wyrazistość — w przystępnej, zabawowej formie.',
     p4_h:'Interakcja',p4_p:'Ćwiczenia na zaufanie i pracę zespołową. Dzieci uczą się od siebie nawzajem.',
-    p5_h:'Próby i pokaz',p5_p:'Na koniec — mały spektakl. Każde dziecko wychodzi na scenę.',
+    p5_h:'Etiudy i gry-historie',p5_p:'Wymyślamy i odgrywamy krótkie historie — dziecko rozluźnia się i uczy wyrażać siebie.',
     fw_title:'Odpowiednie dla Twojego dziecka, jeśli...',
     fw1:'Jest nieśmiałe, boi się występować lub mówić publicznie',fw2:'Chce nowych przyjaciół i żywego kontaktu',
     fw3:'Lubi zabawy, opowieści, wcielanie się w role',fw4:'Jest aktywne, ale potrzebuje ukierunkowania energii',
@@ -516,5 +517,6 @@ if(window.innerWidth>=901){const nl=document.querySelector('.nav-links-desktop')
 window.addEventListener('resize',()=>{const nl=document.querySelector('.nav-links-desktop');if(nl)nl.style.display=window.innerWidth>=901?'flex':'none';});
 </script>
 <script src="edit-mode.js"></script>
+<script src="cookies.js"></script>
 </body>
 </html>

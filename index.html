@@ -225,7 +225,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .hero-actions .btn-primary, .hero-actions .btn-outline { width: 100%; text-align: center; padding: 16px; font-size: 15px; }
     .hero-rating { margin-top: 20px; }
     .hero-img { display: block; }
-    .hero-img img { height: 260px; border-radius: 8px; }
+    .hero-img img { height: auto; object-fit: contain; border-radius: 8px; }
     .hero-badge { bottom: -12px; left: -8px; padding: 10px 14px; }
     .hero-badge strong { font-size: 18px; }
 
@@ -256,7 +256,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* ABOUT */
     .about-grid { grid-template-columns: 1fr; gap: 28px; }
     .about-img { max-width: 100%; }
-    .about-img img { height: 280px; object-fit: cover; }
+    .about-img img { height: auto; object-fit: contain; }
     .about-name { font-size: 32px; }
     .about-text { font-size: 15px; }
     .about-facts { grid-template-columns: 1fr 1fr; }
@@ -289,7 +289,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   @media (max-width: 480px) {
     .stats-grid { grid-template-columns: 1fr 1fr; }
-    .hero-img img { height: 220px; }
+    .hero-img img { height: auto; }
   }
   /* FLOATING CONTACT BAR */
   .float-bar {

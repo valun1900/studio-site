@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Stories — Aleh Kireyeu Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F5F2EC;
+    --ink: #2C2C2A;
+    --muted: #9A968D;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: #1c1c1b;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 56px 32px;
+    min-height: 100vh;
+  }
+
+  /* Each story is a fixed 1080×1920 canvas, scaled down to fit the screen */
+  .story-wrap {
+    width: 405px;   /* 1080 * 0.375 */
+    height: 720px;  /* 1920 * 0.375 */
+    flex: 0 0 auto;
+  }
+  .story {
+    width: 1080px;
+    height: 1920px;
+    transform: scale(0.375);
+    transform-origin: top left;
+    background: var(--bg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 96px;
+    overflow: hidden;
+  }
+
+  .eyebrow {
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 48px;
+  }
+
+  .title {
+    font-size: 84px;
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  .meta {
+    margin-top: 64px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+
+  .body {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    text-wrap: pretty;
+  }
+
+  .spacer { height: 72px; }
+
+  .cta-line {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  .logo {
+    position: absolute;
+    left: 96px;
+    bottom: 88px;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .caption {
+    color: #6b6b66;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 16px;
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+
+  <!-- CARD 1 -->
+  <div>
+    <div class="story-wrap" data-screen-label="Story 1">
+      <div class="story">
+        <h1 class="title">Завтра в&nbsp;студии занятие с&nbsp;детьми</h1>
+        <div class="meta">
+          Среда, 24 июня<br>
+          17:00&nbsp;–&nbsp;19:00<br>
+          Wrocław, ul.&nbsp;Piłsudskiego&nbsp;74
+        </div>
+        <div class="logo">Aleh Kireyeu Studio</div>
+      </div>
+    </div>
+    <div class="caption">Карточка 1 · 1080×1920</div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div>
+    <div class="story-wrap" data-screen-label="Story 2">
+      <div class="story">
+        <p class="body">Подходит ли актёрское мастерство вашему ребёнку — невозможно решить, читая описания и&nbsp;отзывы.<br><br>Это становится понятно изнутри, после одного занятия. По&nbsp;тому, как он выходит из&nbsp;зала, что рассказывает по&nbsp;дороге домой, что говорит про следующую среду.</p>
+        <div class="logo">Aleh Kireyeu Studio</div>
+      </div>
+    </div>
+    <div class="caption">Карточка 2 · 1080×1920</div>
+  </div>
+
+  <!-- CARD 3 -->
+  <div>
+    <div class="story-wrap" data-screen-label="Story 3">
+      <div class="story">
+        <h1 class="title">Дети 7–11&nbsp;лет</h1>
+        <div class="meta">Wrocław, ul.&nbsp;Piłsudskiego&nbsp;74</div>
+        <div class="spacer"></div>
+        <p class="cta-line">Если хотите привести завтра&nbsp;— напишите в&nbsp;Директ</p>
+        <div class="logo">Aleh Kireyeu Studio</div>
+      </div>
+    </div>
+    <div class="caption">Карточка 3 · 1080×1920</div>
+  </div>
+
+</body>
+</html>

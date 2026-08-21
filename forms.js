@@ -6,7 +6,7 @@ const FORM_OPENED_AT = Date.now();
 const DEBUG = /[?&]debug=1/.test(location.search); // логи только при ?debug=1
 const log = (...a) => { if (DEBUG) console.log('[forms]', ...a); };
 
-const CONTACT = { whatsapp: '48571931404', telegram: 'alehkireyeustudio', phone: '+48571931404' };
+const CONTACT = { whatsapp: '48571931404', telegram: 'valun1900', phone: '+48571931404' };
 
 // Honeypot: невидимое поле, которое заполняют только боты
 (function injectHoneypots() {

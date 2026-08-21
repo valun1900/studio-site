@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://alehkireyeu.com/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alehkireyeu.com/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://alehkireyeu.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alehkireyeu.com/"/>
+  </url>
+  <url>
+    <loc>https://alehkireyeu.com/pl/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alehkireyeu.com/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://alehkireyeu.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alehkireyeu.com/"/>
+  </url>
+  <url>
+    <loc>https://alehkireyeu.com/detskaya.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alehkireyeu.com/detskaya.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://alehkireyeu.com/pl/detskaya.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alehkireyeu.com/detskaya.html"/>
+  </url>
+  <url>
+    <loc>https://alehkireyeu.com/pl/detskaya.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alehkireyeu.com/detskaya.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://alehkireyeu.com/pl/detskaya.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alehkireyeu.com/detskaya.html"/>
+  </url>
+  <url>
+    <loc>https://alehkireyeu.com/podrostok.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alehkireyeu.com/podrostok.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://alehkireyeu.com/pl/podrostok.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alehkireyeu.com/podrostok.html"/>
+  </url>
+  <url>
+    <loc>https://alehkireyeu.com/pl/podrostok.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alehkireyeu.com/podrostok.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://alehkireyeu.com/pl/podrostok.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alehkireyeu.com/podrostok.html"/>
+  </url>
+  <url>
+    <loc>https://alehkireyeu.com/vzroslaya.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alehkireyeu.com/vzroslaya.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://alehkireyeu.com/pl/vzroslaya.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alehkireyeu.com/vzroslaya.html"/>
+  </url>
+  <url>
+    <loc>https://alehkireyeu.com/pl/vzroslaya.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alehkireyeu.com/vzroslaya.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://alehkireyeu.com/pl/vzroslaya.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alehkireyeu.com/vzroslaya.html"/>
+  </url>
+  <url>
+    <loc>https://alehkireyeu.com/privacy.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+</urlset>

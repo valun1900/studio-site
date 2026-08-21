@@ -76,7 +76,7 @@ const T = {
 <p>AlehKireyeuStudio, ul. Piłsudskiego 74, Wrocław. Telefon: +48 571 931 404.</p>`
   }
 };
-let lang = localStorage.getItem('lang') || 'ru';
+let lang = /[?&]lang=pl/.test(location.search) ? 'pl' : (localStorage.getItem('lang') || 'ru');
 function setLang(l){
   lang = l; localStorage.setItem('lang', l); document.documentElement.lang = l;
   document.querySelector('[data-i18n="back"]').textContent = T[l].back;

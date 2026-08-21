@@ -2,7 +2,7 @@
 (function () {
   if (localStorage.getItem('cookie_consent')) return; // already decided
 
-  var L = (localStorage.getItem('lang') === 'pl') ? 'pl' : 'ru';
+  var L = (document.documentElement.lang === 'pl' || /[?&]lang=pl/.test(location.search)) ? 'pl' : 'ru';
   var TXT = {
     ru: {
       text: 'Мы используем файлы cookie, чтобы сайт работал корректно и для аналитики. Продолжая пользоваться сайтом, вы соглашаетесь с этим.',

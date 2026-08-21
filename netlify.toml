@@ -17,6 +17,29 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# Кэш: картинки, шрифты и иконки — на год (имена файлов меняются при обновлении)
+[[headers]]
+  for = "/uploads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/favicon.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Скрипты — сутки, с проверкой
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"
+
+# HTML всегда проверяем — правки контента должны появляться сразу
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
 [[redirects]]
   from = "/*"
   to = "/404.html"

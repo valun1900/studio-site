@@ -115,7 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </svg>
   </div>
 
-  <img src="https://alehkireyeu.art/wp-content/uploads/2025/01/logo.svg" alt="AlehKireyeuStudio" style="height:34px;margin:0 auto 16px;display:block;">
+  <img src="uploads/LOGO.svg" alt="AlehKireyeuStudio" style="height:34px;margin:0 auto 16px;display:block;">
   <h1 data-i18n="title">Заявка принята!</h1>
   <p class="sub" data-i18n="sub">Мы свяжемся с вами в ближайшее время. Пока можете написать нам напрямую:</p>
 
@@ -156,7 +156,7 @@ const T = {
   }
 };
 
-let lang = localStorage.getItem('lang') || 'ru';
+let lang = /[?&]lang=pl/.test(location.search) ? 'pl' : (localStorage.getItem('lang') || 'ru');
 function setLang(l) {
   lang = l; localStorage.setItem('lang', l);
   document.documentElement.lang = l;

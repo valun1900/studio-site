@@ -75,7 +75,7 @@ const T = {
   }
 };
 
-let lang = localStorage.getItem('lang') || 'ru';
+let lang = /[?&]lang=pl/.test(location.search) ? 'pl' : (localStorage.getItem('lang') || 'ru');
 function setLang(l) {
   lang = l; localStorage.setItem('lang', l);
   document.documentElement.lang = l;

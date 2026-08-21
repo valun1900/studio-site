@@ -1,5 +1,22 @@
 # Netlify configuration for AlehKireyeuStudio
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Заявки формы → серверная функция (порядок важен: до catch-all 404)
+[[redirects]]
+  from = "/api/lead"
+  to = "/.netlify/functions/lead"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
 [[redirects]]
   from = "/*"
   to = "/404.html"

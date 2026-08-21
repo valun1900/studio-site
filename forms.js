@@ -1,57 +1,57 @@
-// AlehKireyeuStudio — Form submission
-// Sends to Telegram Bot + Email via FormSubmit
+// AlehKireyeuStudio — отправка заявок
+// Никаких токенов на клиенте: всё уходит на серверную функцию /api/lead
 
-const TG_TOKEN  = '8513370661:AAG-tdRTtFJ5bUo9VfHwF1W42ZmMUUcJrac';
-const TG_CHAT   = '388452866';
-const FORM_EMAIL = 'studiowroclaw1@gmail.com';
+const LEAD_ENDPOINT = '/api/lead';
+const FORM_OPENED_AT = Date.now();
 
-async function sendToTelegram(data) {
-  const lines = [];
-  lines.push('📬 *Новая заявка — AlehKireyeuStudio*');
-  lines.push('');
-  if (data.name)      lines.push(`👤 Имя: ${data.name}`);
-  if (data.phone)     lines.push(`📞 Телефон: ${data.phone}`);
-  if (data.messenger) lines.push(`💬 Мессенджер: ${data.messenger}`);
-  if (data.for_whom)  lines.push(`🎭 Для кого: ${data.for_whom}`);
-  if (data.age)       lines.push(`🧒 Возраст ребёнка: ${data.age}`);
-  if (data.page)      lines.push(`📄 Страница: ${data.page}`);
-  lines.push('');
-  lines.push(`🕐 ${new Date().toLocaleString('ru-RU', {timeZone: 'Europe/Warsaw'})}`);
+// Honeypot: невидимое поле, которое заполняют только боты
+(function injectHoneypots() {
+  const css = document.createElement('style');
+  css.textContent = '.hp-field{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important;}';
+  document.head.appendChild(css);
+  const add = () => document.querySelectorAll('form').forEach(f => {
+    if (f.dataset.hpReady) return;
+    f.dataset.hpReady = '1';
+    const w = document.createElement('div');
+    w.className = 'hp-field';
+    w.setAttribute('aria-hidden', 'true');
+    w.innerHTML = '<label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>';
+    f.appendChild(w);
+  });
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', add) : add();
+})();
 
-  const text = lines.join('\n');
+function readHoneypot() {
+  const el = document.querySelector('.hp-field input[name="website"]');
+  return el ? el.value : '';
+}
+
+// Основная функция отправки — вызывается из любой формы
+window.submitForm = async function (data, onSuccess) {
+  const payload = Object.assign({}, data, {
+    website: readHoneypot(),
+    ts: FORM_OPENED_AT
+  });
+
   try {
-    await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+    const res = await fetch(LEAD_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: TG_CHAT, text, parse_mode: 'Markdown' })
+      body: JSON.stringify(payload)
     });
-  } catch(e) { console.warn('TG error', e); }
-}
+    if (!res.ok) {
+      const info = await res.json().catch(() => ({}));
+      console.warn('Lead error', res.status, info.error || '');
+      if (res.status === 400 || res.status === 429) {
+        alert(res.status === 429
+          ? 'Слишком много заявок подряд. Попробуйте через минуту.'
+          : 'Проверьте, пожалуйста, имя и номер телефона.');
+        return;
+      }
+    }
+  } catch (e) {
+    console.warn('Lead network error', e);
+  }
 
-async function sendToEmail(data) {
-  try {
-    await fetch('https://formspree.io/f/xqewvrvz', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        'Имя':        data.name      || '',
-        'Телефон':    data.phone     || '',
-        'Мессенджер': data.messenger || '',
-        'Для кого':   data.for_whom  || '',
-        'Возраст':    data.age       || '',
-        'Страница':   data.page      || '',
-        '_subject':   '🎭 Новая заявка — AlehKireyeuStudio'
-      })
-    });
-  } catch(e) { console.warn('Email error', e); }
-}
-
-// Main submit function — call this from any form
-window.submitForm = async function(data, onSuccess) {
-  await Promise.allSettled([
-    sendToTelegram(data),
-    sendToEmail(data)
-  ]);
-  // Redirect to thank-you page (fires Meta Pixel + Google Tag)
   window.location.href = 'thank-you.html';
 };

@@ -89,10 +89,6 @@ h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,7vw,40px);font-we
 .countdown{font-size:13px;color:var(--text2);margin-top:20px;}
 .countdown span{color:var(--text);font-weight:500;}
 
-/* Lang */
-.lang-bar{position:fixed;top:16px;right:16px;display:flex;gap:4px;}
-.lang-btn{background:none;border:1px solid var(--border);cursor:pointer;font-size:12px;letter-spacing:0.06em;color:var(--text2);padding:4px 8px;font-family:inherit;border-radius:2px;}
-.lang-btn.active{background:var(--accent-light);border-color:var(--accent);color:var(--text);font-weight:500;}
 </style>
 </head>
 <body>
@@ -102,10 +98,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 
-<div class="lang-bar">
-  <button class="lang-btn active" id="btn-ru" onclick="setLang('ru')">RU</button>
-  <button class="lang-btn" id="btn-pl" onclick="setLang('pl')">PL</button>
-</div>
+
 
 <div class="card">
   <div class="icon">
@@ -139,37 +132,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script>
-const T = {
-  ru: {
-    tag: 'Студия во Вроцлаве',
-    title: 'Заявка принята!',
-    sub: 'Мы свяжемся с вами в ближайшее время. Пока можете написать нам напрямую:',
-    back: '← <a href="index.html">Вернуться на сайт</a>',
-    countdown: 'Автоматический переход через <span id="sec">10</span> сек'
-  },
-  pl: {
-    tag: 'Studio we Wrocławiu',
-    title: 'Zgłoszenie przyjęte!',
-    sub: 'Skontaktujemy się z Tobą wkrótce. W międzyczasie możesz napisać do nas bezpośrednio:',
-    back: '← <a href="index.html">Wróć na stronę</a>',
-    countdown: 'Automatyczne przekierowanie za <span id="sec">10</span> sek'
-  }
-};
-
-let lang = /[?&]lang=pl/.test(location.search) ? 'pl' : (localStorage.getItem('lang') || 'ru');
-function setLang(l) {
-  lang = l; localStorage.setItem('lang', l);
-  document.documentElement.lang = l;
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    if (T[l][el.dataset.i18n]) el.innerHTML = T[l][el.dataset.i18n];
-  });
-  ['ru','pl'].forEach(x => {
-    const b = document.getElementById('btn-'+x);
-    if (b) b.classList.toggle('active', x === l);
-  });
-  startCountdown();
-}
-setLang(lang);
+document.documentElement.lang = 'ru';
 
 // Countdown + redirect
 function startCountdown() {

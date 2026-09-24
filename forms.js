@@ -115,15 +115,9 @@ window.submitForm = async function (data, onSuccess, form) {
     return false;
   }
 
-  // Успех — показываем экран «Заявка принята!», если страница его передала
-  if (typeof onSuccess === 'function') {
-    restoreSubmitButton(form, btn && btn.dataset.label);
-    if (form) try { form.reset(); } catch (e) {}
-    onSuccess();
-  } else {
-    const pl = document.documentElement.lang === 'pl';
-    window.location.href = pl ? '../thank-you.html?lang=pl' : 'thank-you.html';
-  }
+  // Успех — всегда одна страница «Заявка принята»
+  const inPl = location.pathname.indexOf('/pl/') !== -1;
+  window.location.href = inPl ? '../thank-you.html' : 'thank-you.html';
   return true;
 };
 

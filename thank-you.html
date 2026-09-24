@@ -86,8 +86,6 @@ h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,7vw,40px);font-we
 .back a{color:var(--accent);text-decoration:none;}
 .back a:hover{text-decoration:underline;}
 
-.countdown{font-size:13px;color:var(--text2);margin-top:20px;}
-.countdown span{color:var(--text);font-weight:500;}
 
 </style>
 </head>
@@ -128,24 +126,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <p class="back" data-i18n="back">← <a href="index.html">Вернуться на сайт</a></p>
-  <p class="countdown" data-i18n="countdown">Автоматический переход через <span id="sec">10</span> сек</p>
 </div>
 
 <script>
 document.documentElement.lang = 'ru';
 
-// Countdown + redirect
-function startCountdown() {
-  let s = 10;
-  clearInterval(window._cd);
-  window._cd = setInterval(() => {
-    s--;
-    const el = document.getElementById('sec');
-    if (el) el.textContent = s;
-    if (s <= 0) { clearInterval(window._cd); window.location.href = 'index.html'; }
-  }, 1000);
-}
-startCountdown();
+
 </script>
 <script src="cookies.js"></script>
 </body>

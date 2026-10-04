@@ -1,0 +1,24 @@
+# AlehKireyeuStudio
+
+> Студия актёрского мастерства во Вроцлаве (ul. Piłsudskiego 74): офлайн-занятия для детей 7–11 лет, подростков 12–17 лет и взрослых. Основатель — режиссёр и педагог Aleh Kireyeu, 25 лет в профессиональном театре. Запись на пробное занятие: +48 571 931 404.
+
+## Студия
+
+- [Главная](https://alehkireyeu.com/): о студии, направления, расписание всех групп, цены, отзывы и контакты.
+
+## Группы
+
+- [Детская студия 7–11 лет](https://alehkireyeu.com/detskaya.html): театральные занятия для детей — уверенность, общение и самовыражение через игру.
+- [Подростковая студия 12–17 лет](https://alehkireyeu.com/podrostok.html): занятия для подростков — уверенность, работа в команде, сцена; суббота 12:00–14:00.
+- [Взрослая студия](https://alehkireyeu.com/vzroslaya.html): актёрские тренинги для взрослых — голос, тело, импровизация, уверенность на публике.
+
+## Polska wersja
+
+- [Strona główna](https://alehkireyeu.com/pl/): szkoła aktorska we Wrocławiu — kierunki, grafik, ceny i kontakt.
+- [Studio dla dzieci 7–11 lat](https://alehkireyeu.com/pl/detskaya.html): zajęcia teatralne dla dzieci.
+- [Studio dla nastolatków 12–17 lat](https://alehkireyeu.com/pl/podrostok.html): zajęcia teatralne dla nastolatków.
+- [Studio dla dorosłych](https://alehkireyeu.com/pl/vzroslaya.html): zajęcia aktorskie dla dorosłych.
+
+## Optional
+
+- [Политика конфиденциальности](https://alehkireyeu.com/privacy.html): как студия обрабатывает персональные данные.

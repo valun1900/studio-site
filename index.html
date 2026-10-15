@@ -376,6 +376,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "17:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
       "dayOfWeek": "Wednesday",
       "opens": "17:00",
       "closes": "19:00"
@@ -403,6 +409,151 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <style id="social-v2">.tg-groups{display:flex;flex-direction:column;gap:8px;margin-top:20px;}.tg-groups-title{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(248,245,239,0.45);margin-bottom:2px;}.tg-group{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:rgba(248,245,239,0.7);text-decoration:none;transition:color 0.2s;min-height:28px;}.tg-group svg{width:15px;height:15px;flex:0 0 auto;opacity:0.85;}.tg-group:hover{color:#F8F5EF;}.social-link{cursor:pointer;}.about-yt{display:inline-flex;align-items:center;gap:8px;margin:0 0 28px;padding:13px 24px;border:1px solid var(--text);border-radius:var(--radius);font-size:14px;letter-spacing:0.02em;color:var(--text);text-decoration:none;transition:background 0.2s,color 0.2s;}.about-yt:hover{background:var(--text);color:var(--bg);}</style>
 <style id="ig-langnote">.float-btn-ig{flex:0 0 48px;background:linear-gradient(45deg,#F58529,#DD2A7B 55%,#8134AF);color:#fff;padding-left:0;padding-right:0;}.float-btn{min-width:0;}@media(max-width:400px){.float-bar{gap:6px;padding:10px 10px;}.float-btn{font-size:12px;gap:4px;padding:12px 4px;}.float-btn svg{width:15px;height:15px;}.float-btn-ig{flex:0 0 44px;}}</style>
+<style id="faq-css">#faq{background:var(--bg);}.faq-inner{max-width:860px;margin:0 auto;}#faq .section-title{max-width:none;margin-bottom:48px;}.faq-group{margin-bottom:44px;}.faq-group-title{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);padding-bottom:14px;border-bottom:1px solid var(--accent);margin:0;}.faq-item{border-bottom:1px solid var(--border);}.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:20px 0;font-family:'Inter',sans-serif;font-size:16px;font-weight:500;line-height:1.45;color:var(--text);}.faq-item summary::-webkit-details-marker{display:none;}.faq-item summary::marker{content:"";}.faq-item summary::after{content:"+";flex:0 0 auto;font-size:24px;font-weight:300;line-height:1;color:var(--accent);transition:transform 0.2s;margin-top:-1px;}.faq-item[open] summary::after{transform:rotate(45deg);}.faq-item summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:2px;}.faq-item p{font-size:15px;line-height:1.7;color:var(--text2);margin:0;padding:0 44px 22px 0;text-wrap:pretty;}.faq-ask{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}.faq-ask p{font-size:16px;color:var(--text);margin:0;}.faq-ask-btns{display:flex;gap:10px;flex-wrap:wrap;}.faq-ask-btns .btn-outline{text-decoration:none;}@media(max-width:900px){#faq{padding-left:16px;padding-right:16px;}.faq-item p{padding-right:0;}.faq-ask{padding:22px 18px;flex-direction:column;align-items:stretch;}.faq-ask-btns{flex-direction:column;}.faq-ask-btns .btn-outline{width:100%;text-align:center;padding:15px;}}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Как проходит первое занятие и сколько оно стоит?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Первое занятие — обычное занятие группы, два часа: разминка, импровизация, работа с речью и телом, этюды. Вы не наблюдаете со стороны, а сразу работаете вместе со всеми. Стоит 125 zł и ни к чему не обязывает: после занятия вы сами решаете, оставаться ли. Если покупаете абонемент сразу, первое занятие входит в него."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужен ли опыт? Нужно ли что-то готовить?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет и нет. Ни стихов, ни басен, ни монологов готовить не надо. Отбора и прослушиваний у нас нет, программа рассчитана на тех, кто начинает с нуля."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что надеть и что взять с собой?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Удобную одежду, в которой можно свободно двигаться. Сменная обувь обязательна."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли присоединиться в середине года?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Набор у нас постоянный, войти в группу можно в любой момент. Новичок включается в работу с первого занятия, «догонять» группу не нужно."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как записаться?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Оставьте заявку на сайте или напишите мне в Instagram Direct или Telegram. Подберу группу по возрасту и удобному дню."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ребёнок очень стеснительный — или, наоборот, не может усидеть на месте. Ему подойдёт?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Подойдёт и тому, и другому. Стеснительному не нужно с первого дня выходить одному перед всеми: сначала игры и упражнения в общем кругу, где он один из многих. Тому, кто не может усидеть, помогает сам ритм занятия: задания часто меняются, есть движение и есть работа на внимание. Моя задача — не переделать характер, а научить ребёнка решать самому и действовать."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ребёнок говорит по-русски не очень уверенно. Справится?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Занятия идут на русском. Если ребёнок понимает русскую речь, этого достаточно, чтобы начать: в игре и этюде важнее действие, чем правильные фразы. А говорить ему придётся много — в группе, где никто не исправляет и не ставит оценок."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ребёнку 12–16 ничего не хочется, он всё время в телефоне. Стоит ли приводить?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Заставлять не нужно, да и не получится. Достаточно, чтобы он пришёл один раз. В 12–16 лет страшно показаться смешным, и этот страх часто звучит как «мне неинтересно». На занятии он оказывается среди ровесников, где никто не оценивает, и молчать там просто не выходит. Группа 12–16 отдельная: ни с младшими детьми, ни со взрослыми она не пересекается."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли родителям посмотреть занятие?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет — ни первое, ни последующие, открытых уроков тоже нет. При родителях дети играют иначе: смотрят на вас, а не на партнёра, и начинают работать на оценку. Поэтому в зале только группа и педагог. Чем мы занимаемся, вы увидите в закрытом чате группы в Telegram: там я выкладываю этюды с занятий и пишу, над чем мы работали."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Зачем это ребёнку, если он не собирается становиться актёром?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Я и не готовлю актёров. Актёрское мастерство здесь — инструмент: говорить, когда на тебя смотрят; слышать партнёра; держать внимание; придумать и довести до конца. Это пригодится везде, где ребёнку приходится быть среди людей."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Мне за 40. Не поздно начинать?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Не поздно. Во взрослых группах в основном люди от 35 лет, со своей историей: семья, работа, переезд. Это не помеха, а материал: человеку с жизненным опытом есть что играть."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Я не собираюсь на сцену. Зачем мне это?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Большинство взрослых приходит не за сценой. Приходят, чтобы перестать зажиматься, когда на тебя смотрят, вернуть голос, выбраться из круга «дом — работа — дом». Ученики в отзывах называют студию отдушиной и местом, где не оценивают."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Впишутся ли занятия в мой график?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Это один вечер в неделю: четверг 19:00–21:00 или воскресенье 18:00–20:00. Если не получилось прийти в свой день, занятие можно отработать в другой взрослой группе."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Выдаёте ли вы сертификат?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, взрослым ученикам студия выдаёт фирменный сертификат."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько стоят занятия и что будет, если пропустить?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Абонемент на месяц — 400 zł за 4 занятия по 2 часа. Он закрепляет за вами место в группе. Разовое занятие — 125 zł. Пропущенное занятие можно отработать в другой группе своего возраста в течение трёх месяцев: у детей это среда, суббота или воскресенье, у ребят 12–16 — вторник или суббота. Если уезжаете на целый месяц, предупредите заранее: абонемент встанет на паузу, а место в группе сохранится."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Идут ли занятия летом?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, летом занятия идут по обычному расписанию."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Кто ведёт занятия и сколько человек в группе?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Все группы веду я сам, Олег Киреев: режиссёр-постановщик, больше 25 лет в театре, преподавал актёрское мастерство в Белорусской академии искусств. Группы небольшие: до 12 человек, у взрослых до 10."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -573,6 +724,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <th data-i18n="sch_th3">Группа</th>
           </tr></thead>
           <tbody>
+            <tr><td data-i18n="day_tue">Вторник</td><td>17:00–19:00</td><td><span class="group-tag" data-i18n="grp_teens">Подростки</span></td></tr>
             <tr><td data-i18n="day_wed">Среда</td><td>17:00–19:00</td><td><span class="group-tag" data-i18n="grp_kids">Дети</span></td></tr>
             <tr><td data-i18n="day_thu">Четверг</td><td>19:00–21:00</td><td><span class="group-tag" data-i18n="grp_adults">Взрослые</span></td></tr>
             <tr><td data-i18n="day_sat">Суббота</td><td>12:00–14:00</td><td><span class="group-tag" data-i18n="grp_teens">Подростки</span></td></tr>
@@ -640,6 +792,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="reviews-more reveal"><a href="https://www.google.com/maps/search/?api=1&amp;query=AlehKireyeuStudio%2C+ul.+Pi%C5%82sudskiego+74%2C+Wroc%C5%82aw&amp;query_place_id=ChIJSwAjp4LDD0cRYl88L6LzcqI" target="_blank" data-i18n="rev_more">Все отзывы на Google</a></div>
   </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="faq-inner">
+<p class="section-label reveal">Вопросы и ответы</p>
+<h2 class="section-title reveal">Что спрашивают перед первым занятием</h2>
+<div class="faq-group">
+<h3 class="faq-group-title">Первое занятие</h3>
+<details class="faq-item"><summary>Как проходит первое занятие и сколько оно стоит?</summary><p>Первое занятие — обычное занятие группы, два часа: разминка, импровизация, работа с речью и телом, этюды. Вы не наблюдаете со стороны, а сразу работаете вместе со всеми. Стоит 125 zł и ни к чему не обязывает: после занятия вы сами решаете, оставаться ли. Если покупаете абонемент сразу, первое занятие входит в него.</p></details>
+<details class="faq-item"><summary>Нужен ли опыт? Нужно ли что-то готовить?</summary><p>Нет и нет. Ни стихов, ни басен, ни монологов готовить не надо. Отбора и прослушиваний у нас нет, программа рассчитана на тех, кто начинает с нуля.</p></details>
+<details class="faq-item"><summary>Что надеть и что взять с собой?</summary><p>Удобную одежду, в которой можно свободно двигаться. Сменная обувь обязательна.</p></details>
+<details class="faq-item"><summary>Можно ли присоединиться в середине года?</summary><p>Да. Набор у нас постоянный, войти в группу можно в любой момент. Новичок включается в работу с первого занятия, «догонять» группу не нужно.</p></details>
+<details class="faq-item"><summary>Как записаться?</summary><p>Оставьте заявку на сайте или напишите мне в Instagram Direct или Telegram. Подберу группу по возрасту и удобному дню.</p></details>
+</div>
+<div class="faq-group">
+<h3 class="faq-group-title">Дети 7–11 и ребята 12–16</h3>
+<details class="faq-item"><summary>Ребёнок очень стеснительный — или, наоборот, не может усидеть на месте. Ему подойдёт?</summary><p>Подойдёт и тому, и другому. Стеснительному не нужно с первого дня выходить одному перед всеми: сначала игры и упражнения в общем кругу, где он один из многих. Тому, кто не может усидеть, помогает сам ритм занятия: задания часто меняются, есть движение и есть работа на внимание. Моя задача — не переделать характер, а научить ребёнка решать самому и действовать.</p></details>
+<details class="faq-item"><summary>Ребёнок говорит по-русски не очень уверенно. Справится?</summary><p>Занятия идут на русском. Если ребёнок понимает русскую речь, этого достаточно, чтобы начать: в игре и этюде важнее действие, чем правильные фразы. А говорить ему придётся много — в группе, где никто не исправляет и не ставит оценок.</p></details>
+<details class="faq-item"><summary>Ребёнку 12–16 ничего не хочется, он всё время в телефоне. Стоит ли приводить?</summary><p>Заставлять не нужно, да и не получится. Достаточно, чтобы он пришёл один раз. В 12–16 лет страшно показаться смешным, и этот страх часто звучит как «мне неинтересно». На занятии он оказывается среди ровесников, где никто не оценивает, и молчать там просто не выходит. Группа 12–16 отдельная: ни с младшими детьми, ни со взрослыми она не пересекается.</p></details>
+<details class="faq-item"><summary>Можно ли родителям посмотреть занятие?</summary><p>Нет — ни первое, ни последующие, открытых уроков тоже нет. При родителях дети играют иначе: смотрят на вас, а не на партнёра, и начинают работать на оценку. Поэтому в зале только группа и педагог. Чем мы занимаемся, вы увидите в закрытом чате группы в Telegram: там я выкладываю этюды с занятий и пишу, над чем мы работали.</p></details>
+<details class="faq-item"><summary>Зачем это ребёнку, если он не собирается становиться актёром?</summary><p>Я и не готовлю актёров. Актёрское мастерство здесь — инструмент: говорить, когда на тебя смотрят; слышать партнёра; держать внимание; придумать и довести до конца. Это пригодится везде, где ребёнку приходится быть среди людей.</p></details>
+</div>
+<div class="faq-group">
+<h3 class="faq-group-title">Взрослые</h3>
+<details class="faq-item"><summary>Мне за 40. Не поздно начинать?</summary><p>Не поздно. Во взрослых группах в основном люди от 35 лет, со своей историей: семья, работа, переезд. Это не помеха, а материал: человеку с жизненным опытом есть что играть.</p></details>
+<details class="faq-item"><summary>Я не собираюсь на сцену. Зачем мне это?</summary><p>Большинство взрослых приходит не за сценой. Приходят, чтобы перестать зажиматься, когда на тебя смотрят, вернуть голос, выбраться из круга «дом — работа — дом». Ученики в отзывах называют студию отдушиной и местом, где не оценивают.</p></details>
+<details class="faq-item"><summary>Впишутся ли занятия в мой график?</summary><p>Это один вечер в неделю: четверг 19:00–21:00 или воскресенье 18:00–20:00. Если не получилось прийти в свой день, занятие можно отработать в другой взрослой группе.</p></details>
+<details class="faq-item"><summary>Выдаёте ли вы сертификат?</summary><p>Да, взрослым ученикам студия выдаёт фирменный сертификат.</p></details>
+</div>
+<div class="faq-group">
+<h3 class="faq-group-title">Оплата и организация</h3>
+<details class="faq-item"><summary>Сколько стоят занятия и что будет, если пропустить?</summary><p>Абонемент на месяц — 400 zł за 4 занятия по 2 часа. Он закрепляет за вами место в группе. Разовое занятие — 125 zł. Пропущенное занятие можно отработать в другой группе своего возраста в течение трёх месяцев: у детей это среда, суббота или воскресенье, у ребят 12–16 — вторник или суббота. Если уезжаете на целый месяц, предупредите заранее: абонемент встанет на паузу, а место в группе сохранится.</p></details>
+<details class="faq-item"><summary>Идут ли занятия летом?</summary><p>Да, летом занятия идут по обычному расписанию.</p></details>
+<details class="faq-item"><summary>Кто ведёт занятия и сколько человек в группе?</summary><p>Все группы веду я сам, Олег Киреев: режиссёр-постановщик, больше 25 лет в театре, преподавал актёрское мастерство в Белорусской академии искусств. Группы небольшие: до 12 человек, у взрослых до 10.</p></details>
+</div>
+<div class="faq-ask">
+<p>Не нашли свой вопрос? Напишите мне — отвечаю сам.</p>
+<div class="faq-ask-btns"><a class="btn-outline" href="https://ig.me/m/alehkireyeu" target="_blank" rel="noopener">Instagram Direct</a><a class="btn-outline" href="https://t.me/valun1900" target="_blank" rel="noopener">Telegram</a></div>
+</div>
+</div>
 </section>
 
 <!-- CTA -->
@@ -789,7 +982,7 @@ const T = {
     c4_tag:'Корпоративным', c4_h:'Бизнес-тренинги', c4_p:'Командообразование, публичные выступления, уверенная речь для вашей команды. Формат под запрос.', c4_btn:'Узнать детали',
     c_link:'Подробнее о курсе',
     sch_label:'Расписание', sch_title:'Когда мы занимаемся', sch_th1:'День', sch_th2:'Время', sch_th3:'Группа',
-    day_wed:'Среда', day_thu:'Четверг', day_sat:'Суббота', day_sun:'Воскресенье',
+    day_tue:'Вторник', day_wed:'Среда', day_thu:'Четверг', day_sat:'Суббота', day_sun:'Воскресенье',
     grp_kids:'Дети', grp_adults:'Взрослые', grp_teens:'Подростки',
     price_label:'Стоимость', price_title:'Прозрачные цены', price_h4:'💡 Акция — оплати месяц сразу',
     price_note:'При оплате 4 занятий сразу — экономия 100 zł. Занятия действительны в любой группе.',
@@ -915,6 +1108,15 @@ function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('
   <a href="https://ig.me/m/alehkireyeu" target="_blank" rel="noopener" class="float-btn float-btn-ig" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
 </div>
 
+<script>
+document.addEventListener('toggle', function (e) {
+  var d = e.target;
+  if (!d.classList || !d.classList.contains('faq-item') || !d.open) return;
+  var s = d.querySelector('summary');
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'faq_open', faq_question: s ? s.textContent.trim() : '' });
+}, true);
+</script>
 <script src="cookies.js"></script>
 </body>
 </html>

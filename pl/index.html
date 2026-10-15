@@ -375,6 +375,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "17:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
       "dayOfWeek": "Wednesday",
       "opens": "17:00",
       "closes": "19:00"
@@ -573,6 +579,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <th data-i18n="sch_th3">Grupa</th>
           </tr></thead>
           <tbody>
+            <tr><td data-i18n="day_tue">Wtorek</td><td>17:00–19:00</td><td><span class="group-tag" data-i18n="grp_teens">Nastolatkowie</span></td></tr>
             <tr><td data-i18n="day_wed">Środa</td><td>17:00–19:00</td><td><span class="group-tag" data-i18n="grp_kids">Dzieci</span></td></tr>
             <tr><td data-i18n="day_thu">Czwartek</td><td>19:00–21:00</td><td><span class="group-tag" data-i18n="grp_adults">Dorośli</span></td></tr>
             <tr><td data-i18n="day_sat">Sobota</td><td>12:00–14:00</td><td><span class="group-tag" data-i18n="grp_teens">Nastolatkowie</span></td></tr>
@@ -785,7 +792,7 @@ const T = {
     c4_tag:'Dla firm', c4_h:'Szkolenia biznesowe', c4_p:'Rozwijamy wystąpienia publiczne, prezentacje i negocjacje. Dla menedżerów, sprzedawców i zespołów startupów.', c4_btn:'Zapytaj o szczegóły',
     c_link:'Więcej o kursie',
     sch_label:'Harmonogram', sch_title:'Kiedy się uczymy', sch_th1:'Dzień', sch_th2:'Godzina', sch_th3:'Grupa',
-    day_wed:'Środa', day_thu:'Czwartek', day_sat:'Sobota', day_sun:'Niedziela',
+    day_tue:'Wtorek', day_wed:'Środa', day_thu:'Czwartek', day_sat:'Sobota', day_sun:'Niedziela',
     grp_kids:'Dzieci', grp_adults:'Dorośli', grp_teens:'Nastolatkowie',
     price_label:'Cennik', price_title:'Przejrzyste ceny', price_h4:'💡 Promocja — opłać miesiąc od razu',
     price_note:'Przy opłacie za 4 zajęcia od razu — oszczędność 100 zł. Zajęcia ważne w każdej grupie.',
